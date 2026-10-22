@@ -41,18 +41,37 @@ tools/retro_wash.py vorlage.qxw -o show.qxw --page "Seite 3" --x 0 --y 200
 ## Bedienung (VC-Rahmen „Retro Wash“)
 
 - **Basis** öffnet den Master-Dimmer – ohne ihn bleibt alles dunkel (der Dimmer wirkt auf COBs *und* Ringe).
-- **Lauflicht** synchron / gegenläufig / fortlaufend über alle Geräte (Solo-Frame: immer nur eine Variante).
+- **Lauflicht** synchron / gegenläufig / fortlaufend / Schlange / farbig über alle Geräte und
+  „oben+unten“ (Solo-Frame: immer nur eine Variante). Schlange: Gerät 1 von oben nach unten, Gerät 2
+  von unten nach oben usw., viermal so schnell wie das Tempo. oben+unten: COBs gehen paarweise von
+  außen nach innen an und wieder aus. farbig: wie fortlaufend, dazu der Ring um die leuchtende COB in
+  einer Farbe je Gerät. Ein gemeinsamer Speed-Dial, die Verhältnisse bleiben erhalten.
+- **Glimmen** hält alle COBs schwach an (Grundlicht), Lauflicht und Aktionen hellen darüber auf.
 - **Farbwechsel** synchron / versetzt (Geräte mit unterschiedlichen Farben).
-- **Aktionen** (einmalig, legen sich über das Programm): Alle COBs 5 s, Herzschlag, Welle (läuft über
-  alle Geräte), Farbblitz (abwechselnd zwischen den Geräten).
+- **Ringlauf** (zusätzlich zum Farbwechsel): eisblauer Punkt im Ring, läuft von unten nach oben –
+  gegen das synchrone Lauflicht, im Tempo des Lauflichts.
+- **Aktionen** (einmalig, legen sich über das Programm, jeweils höchstens ~10 s): Alle COBs 5 s,
+  Herzschlag, Welle (läuft über alle Geräte), Gewitter (siehe unten),
+  Schlange, oben+unten, Glühbirne (glimmt an, flackert, geht voll an), Funkeln (zufällige COBs),
+  Countdown (COBs gehen nacheinander aus, Schlussblitz).
+- **Gewitter**: Blitze in den Ringen (Wetterleuchten, Einschlag von oben nach unten, zwischen den
+  Geräten springend), dazu „COBs aus“ und „Himmel dunkel“ (nachtblau abgedunkelter Farbwechsel).
+  COBs und Himmel bleiben nur dunkel, *solange gehalten wird* – per Taster über die Impulsdauer, von
+  Hand mit gehaltener Taste **G** (ein Klick auf den Button startet nur die Blitze). Nach dem
+  Loslassen läuft alles wie vorher weiter.
 - **Helligkeit COB / Farben** sind Submaster: sie dimmen alles, was über Buttons im jeweiligen Rahmen läuft.
 
 | OSC-Pfad | Aktion |
 |---|---|
 | `/retro/aktion/1` | Alle COBs 5 s |
 | `/retro/aktion/2` | Herzschlag (~10 s) |
-| `/retro/aktion/3` | Welle (~8 s bei 2 Geräten) |
-| `/retro/aktion/4` | Farbblitz + „COBs aus“ + „Hintergrund dunkel“ (Flash, solange gehalten) |
+| `/retro/aktion/3` | Welle (~9 s bei 2 Geräten, viermal runter und hoch) |
+| `/retro/aktion/4` | Gewitter (~5 s) + „COBs aus“ + „Himmel dunkel“ (Flash, solange gehalten) |
+| `/retro/aktion/5` | Schlange, dreimal hin und zurück (~7 s, nur bei mehreren Geräten) |
+| `/retro/aktion/6` | oben+unten, dreimal füllen und leeren (~8 s) |
+| `/retro/aktion/7` | Glühbirne (~10 s) |
+| `/retro/aktion/8` | Funkeln (~8 s) |
+| `/retro/aktion/9` | Countdown (~9 s) |
 
 ## Taster
 
@@ -65,13 +84,13 @@ Einrichtungsseite:
 | Adresse von QLC+ | IP des QLC+-Rechners |
 | OSC-Port | 7701 (Universum 2) |
 | OSC-Pfad | `/retro/aktion` |
-| Aktions-IDs | `1, 2, 3, 4` – bei jedem Treffer eine zufällig, nie zweimal dieselbe hintereinander |
-| Impulsdauer | 2500 ms – so lange bleiben beim Farbblitz COBs und Hintergrund aus |
+| Aktions-IDs | `1, 2, 3, 4, 5, 6, 7, 8, 9` – bei jedem Treffer eine zufällig, nie zweimal dieselbe hintereinander |
+| Impulsdauer | 5000 ms – so lange bleiben beim Gewitter COBs und Himmel dunkel |
 | Sperre | mindestens 11 s, sonst bricht ein neuer Treffer eine laufende Aktion ab |
 
 Trefferchance nach Geschmack: 100 % löst bei jedem Druck aus. Ohne ESP32 testen:
 `python3 tools/qlc_ws.py --osc-port 7701 osc <QLC-IP> /retro/aktion/3` im Taster-Projekt (der
-Farbblitz braucht dabei die Haltezeit, die das Tool nicht hat).
+Gewitter braucht dabei die Haltezeit, die das Tool nicht hat).
 
 ## Bausteine (übertragbar auf andere Geräte)
 

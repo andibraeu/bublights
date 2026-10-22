@@ -4,24 +4,24 @@
  <Creator>
   <Name>Q Light Controller Plus</Name>
   <Version>5.3.0</Version>
-  <Author></Author>
+  <Author />
  </Creator>
  <Engine>
   <InputOutputMap>
-   <BeatGenerator BeatType="Internal" BPM="120"/>
-   <NetworkServer Type="Native" AutoStart="False" Name="QLC+_A40203A" Password=""/>
+   <BeatGenerator BeatType="Internal" BPM="120" />
+   <NetworkServer Type="Native" AutoStart="False" Name="QLC+_A40203A" Password="" />
    <Universe Name="Universe 1" ID="0" Passthrough="True">
     <Output Plugin="DMX USB" Name="None" UID="None" Line="0">
-     <PluginParameters UniverseChannels="66"/>
+     <PluginParameters UniverseChannels="66" />
     </Output>
    </Universe>
    <Universe Name="Universe 2" ID="1">
-    <Input Plugin="OSC" Name="10.64.32.58" UID="" Line="0"/>
-    <Feedback Plugin="OSC" Name="10.64.32.58" UID="" Line="0"/>
+    <Input Plugin="OSC" Name="10.64.32.58" UID="" Line="0" />
+    <Feedback Plugin="OSC" Name="10.64.32.58" UID="" Line="0" />
    </Universe>
-   <Universe Name="Universe 3" ID="2"/>
-   <Universe Name="Universe 4" ID="3"/>
-   <Universe Name="Universe 5" ID="4"/>
+   <Universe Name="Universe 3" ID="2" />
+   <Universe Name="Universe 4" ID="3" />
+   <Universe Name="Universe 5" ID="4" />
   </InputOutputMap>
   <Fixture>
    <Manufacturer>UKING</Manufacturer>
@@ -44,45 +44,45 @@
    <Channels>33</Channels>
   </Fixture>
   <Function ID="0" Type="Scene" Name="Basis (Dimmer auf)" Path="Retro Wash">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">0,255,1,0,11,0,12,0,13,0,14,0</FixtureVal>
    <FixtureVal ID="1">0,255,1,0,11,0,12,0,13,0,14,0</FixtureVal>
   </Function>
   <Function ID="1" Type="Scene" Name="Lauflicht synchron 1" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">2,255</FixtureVal>
    <FixtureVal ID="1">2,255</FixtureVal>
   </Function>
   <Function ID="2" Type="Scene" Name="Lauflicht synchron 2" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">3,255</FixtureVal>
    <FixtureVal ID="1">3,255</FixtureVal>
   </Function>
   <Function ID="3" Type="Scene" Name="Lauflicht synchron 3" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">4,255</FixtureVal>
    <FixtureVal ID="1">4,255</FixtureVal>
   </Function>
   <Function ID="4" Type="Scene" Name="Lauflicht synchron 4" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">5,255</FixtureVal>
    <FixtureVal ID="1">5,255</FixtureVal>
   </Function>
   <Function ID="5" Type="Scene" Name="Lauflicht synchron 5" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">6,255</FixtureVal>
    <FixtureVal ID="1">6,255</FixtureVal>
   </Function>
   <Function ID="6" Type="Scene" Name="Lauflicht synchron 6" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">7,255</FixtureVal>
    <FixtureVal ID="1">7,255</FixtureVal>
   </Function>
   <Function ID="7" Type="Chaser" Name="COB Lauflicht synchron" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="1200" FadeOut="2400" Duration="1200"/>
+   <Speed FadeIn="1200" FadeOut="2400" Duration="1200" />
    <Direction>Forward</Direction>
    <RunOrder>PingPong</RunOrder>
-   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common" />
    <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">1</Step>
    <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">2</Step>
    <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">3</Step>
@@ -91,40 +91,40 @@
    <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">6</Step>
   </Function>
   <Function ID="8" Type="Scene" Name="Lauflicht gegenläufig 1" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">2,255</FixtureVal>
    <FixtureVal ID="1">7,255</FixtureVal>
   </Function>
   <Function ID="9" Type="Scene" Name="Lauflicht gegenläufig 2" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">3,255</FixtureVal>
    <FixtureVal ID="1">6,255</FixtureVal>
   </Function>
   <Function ID="10" Type="Scene" Name="Lauflicht gegenläufig 3" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">4,255</FixtureVal>
    <FixtureVal ID="1">5,255</FixtureVal>
   </Function>
   <Function ID="11" Type="Scene" Name="Lauflicht gegenläufig 4" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">5,255</FixtureVal>
    <FixtureVal ID="1">4,255</FixtureVal>
   </Function>
   <Function ID="12" Type="Scene" Name="Lauflicht gegenläufig 5" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">6,255</FixtureVal>
    <FixtureVal ID="1">3,255</FixtureVal>
   </Function>
   <Function ID="13" Type="Scene" Name="Lauflicht gegenläufig 6" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">7,255</FixtureVal>
    <FixtureVal ID="1">2,255</FixtureVal>
   </Function>
   <Function ID="14" Type="Chaser" Name="COB Lauflicht gegenläufig" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="1200" FadeOut="2400" Duration="1200"/>
+   <Speed FadeIn="1200" FadeOut="2400" Duration="1200" />
    <Direction>Forward</Direction>
    <RunOrder>PingPong</RunOrder>
-   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common" />
    <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">8</Step>
    <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">9</Step>
    <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">10</Step>
@@ -133,58 +133,58 @@
    <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">13</Step>
   </Function>
   <Function ID="15" Type="Scene" Name="Lauflicht fortlaufend 1" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">2,255</FixtureVal>
   </Function>
   <Function ID="16" Type="Scene" Name="Lauflicht fortlaufend 2" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">3,255</FixtureVal>
   </Function>
   <Function ID="17" Type="Scene" Name="Lauflicht fortlaufend 3" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">4,255</FixtureVal>
   </Function>
   <Function ID="18" Type="Scene" Name="Lauflicht fortlaufend 4" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">5,255</FixtureVal>
   </Function>
   <Function ID="19" Type="Scene" Name="Lauflicht fortlaufend 5" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">6,255</FixtureVal>
   </Function>
   <Function ID="20" Type="Scene" Name="Lauflicht fortlaufend 6" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">7,255</FixtureVal>
   </Function>
   <Function ID="21" Type="Scene" Name="Lauflicht fortlaufend 7" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="1">2,255</FixtureVal>
   </Function>
   <Function ID="22" Type="Scene" Name="Lauflicht fortlaufend 8" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="1">3,255</FixtureVal>
   </Function>
   <Function ID="23" Type="Scene" Name="Lauflicht fortlaufend 9" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="1">4,255</FixtureVal>
   </Function>
   <Function ID="24" Type="Scene" Name="Lauflicht fortlaufend 10" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="1">5,255</FixtureVal>
   </Function>
   <Function ID="25" Type="Scene" Name="Lauflicht fortlaufend 11" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="1">6,255</FixtureVal>
   </Function>
   <Function ID="26" Type="Scene" Name="Lauflicht fortlaufend 12" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="1">7,255</FixtureVal>
   </Function>
   <Function ID="27" Type="Chaser" Name="COB Lauflicht fortlaufend" Path="Retro Wash/Lauflicht">
-   <Speed FadeIn="1200" FadeOut="2400" Duration="1200"/>
+   <Speed FadeIn="1200" FadeOut="2400" Duration="1200" />
    <Direction>Forward</Direction>
    <RunOrder>PingPong</RunOrder>
-   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common" />
    <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">15</Step>
    <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">16</Step>
    <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">17</Step>
@@ -198,325 +198,993 @@
    <Step Number="10" FadeIn="0" Hold="0" FadeOut="0">25</Step>
    <Step Number="11" FadeIn="0" Hold="0" FadeOut="0">26</Step>
   </Function>
-  <Function ID="28" Type="Scene" Name="Farbe Rubin" Path="Retro Wash/Farben">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,200,9,0,10,20,15,200,16,0,17,20,18,200,19,0,20,20,21,200,22,0,23,20,24,200,25,0,26,20,27,200,28,0,29,20,30,200,31,0,32,20</FixtureVal>
-   <FixtureVal ID="1">8,200,9,0,10,20,15,200,16,0,17,20,18,200,19,0,20,20,21,200,22,0,23,20,24,200,25,0,26,20,27,200,28,0,29,20,30,200,31,0,32,20</FixtureVal>
+  <Function ID="28" Type="Scene" Name="Lauflicht Schlange 1" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255</FixtureVal>
   </Function>
-  <Function ID="29" Type="Scene" Name="Farbe Bernstein" Path="Retro Wash/Farben">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,200,9,70,10,0,15,200,16,70,17,0,18,200,19,70,20,0,21,200,22,70,23,0,24,200,25,70,26,0,27,200,28,70,29,0,30,200,31,70,32,0</FixtureVal>
-   <FixtureVal ID="1">8,200,9,70,10,0,15,200,16,70,17,0,18,200,19,70,20,0,21,200,22,70,23,0,24,200,25,70,26,0,27,200,28,70,29,0,30,200,31,70,32,0</FixtureVal>
+  <Function ID="29" Type="Scene" Name="Lauflicht Schlange 2" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">3,255</FixtureVal>
   </Function>
-  <Function ID="30" Type="Scene" Name="Farbe Magenta" Path="Retro Wash/Farben">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,180,9,0,10,120,15,180,16,0,17,120,18,180,19,0,20,120,21,180,22,0,23,120,24,180,25,0,26,120,27,180,28,0,29,120,30,180,31,0,32,120</FixtureVal>
-   <FixtureVal ID="1">8,180,9,0,10,120,15,180,16,0,17,120,18,180,19,0,20,120,21,180,22,0,23,120,24,180,25,0,26,120,27,180,28,0,29,120,30,180,31,0,32,120</FixtureVal>
+  <Function ID="30" Type="Scene" Name="Lauflicht Schlange 3" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">4,255</FixtureVal>
   </Function>
-  <Function ID="31" Type="Scene" Name="Farbe Violett" Path="Retro Wash/Farben">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,90,9,0,10,200,15,90,16,0,17,200,18,90,19,0,20,200,21,90,22,0,23,200,24,90,25,0,26,200,27,90,28,0,29,200,30,90,31,0,32,200</FixtureVal>
-   <FixtureVal ID="1">8,90,9,0,10,200,15,90,16,0,17,200,18,90,19,0,20,200,21,90,22,0,23,200,24,90,25,0,26,200,27,90,28,0,29,200,30,90,31,0,32,200</FixtureVal>
+  <Function ID="31" Type="Scene" Name="Lauflicht Schlange 4" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">5,255</FixtureVal>
   </Function>
-  <Function ID="32" Type="Scene" Name="Farbe Tiefblau" Path="Retro Wash/Farben">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,0,9,20,10,200,15,0,16,20,17,200,18,0,19,20,20,200,21,0,22,20,23,200,24,0,25,20,26,200,27,0,28,20,29,200,30,0,31,20,32,200</FixtureVal>
-   <FixtureVal ID="1">8,0,9,20,10,200,15,0,16,20,17,200,18,0,19,20,20,200,21,0,22,20,23,200,24,0,25,20,26,200,27,0,28,20,29,200,30,0,31,20,32,200</FixtureVal>
+  <Function ID="32" Type="Scene" Name="Lauflicht Schlange 5" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">6,255</FixtureVal>
   </Function>
-  <Function ID="33" Type="Scene" Name="Farbe Petrol" Path="Retro Wash/Farben">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,0,9,120,10,140,15,0,16,120,17,140,18,0,19,120,20,140,21,0,22,120,23,140,24,0,25,120,26,140,27,0,28,120,29,140,30,0,31,120,32,140</FixtureVal>
-   <FixtureVal ID="1">8,0,9,120,10,140,15,0,16,120,17,140,18,0,19,120,20,140,21,0,22,120,23,140,24,0,25,120,26,140,27,0,28,120,29,140,30,0,31,120,32,140</FixtureVal>
+  <Function ID="33" Type="Scene" Name="Lauflicht Schlange 6" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">7,255</FixtureVal>
   </Function>
-  <Function ID="34" Type="Chaser" Name="RGB Farbwechsel synchron" Path="Retro Wash/Farben">
-   <Speed FadeIn="8000" FadeOut="8000" Duration="16000"/>
+  <Function ID="34" Type="Scene" Name="Lauflicht Schlange 7" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">7,255</FixtureVal>
+  </Function>
+  <Function ID="35" Type="Scene" Name="Lauflicht Schlange 8" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">6,255</FixtureVal>
+  </Function>
+  <Function ID="36" Type="Scene" Name="Lauflicht Schlange 9" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">5,255</FixtureVal>
+  </Function>
+  <Function ID="37" Type="Scene" Name="Lauflicht Schlange 10" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">4,255</FixtureVal>
+  </Function>
+  <Function ID="38" Type="Scene" Name="Lauflicht Schlange 11" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">3,255</FixtureVal>
+  </Function>
+  <Function ID="39" Type="Scene" Name="Lauflicht Schlange 12" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">2,255</FixtureVal>
+  </Function>
+  <Function ID="40" Type="Chaser" Name="COB Lauflicht Schlange" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="300" FadeOut="600" Duration="300" />
    <Direction>Forward</Direction>
-   <RunOrder>Loop</RunOrder>
-   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
+   <RunOrder>PingPong</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common" />
    <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">28</Step>
    <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">29</Step>
    <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">30</Step>
    <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">31</Step>
    <Step Number="4" FadeIn="0" Hold="0" FadeOut="0">32</Step>
    <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">33</Step>
+   <Step Number="6" FadeIn="0" Hold="0" FadeOut="0">34</Step>
+   <Step Number="7" FadeIn="0" Hold="0" FadeOut="0">35</Step>
+   <Step Number="8" FadeIn="0" Hold="0" FadeOut="0">36</Step>
+   <Step Number="9" FadeIn="0" Hold="0" FadeOut="0">37</Step>
+   <Step Number="10" FadeIn="0" Hold="0" FadeOut="0">38</Step>
+   <Step Number="11" FadeIn="0" Hold="0" FadeOut="0">39</Step>
   </Function>
-  <Function ID="35" Type="Scene" Name="Farben versetzt 1" Path="Retro Wash/Farben">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,200,9,0,10,20,15,200,16,0,17,20,18,200,19,0,20,20,21,200,22,0,23,20,24,200,25,0,26,20,27,200,28,0,29,20,30,200,31,0,32,20</FixtureVal>
-   <FixtureVal ID="1">8,90,9,0,10,200,15,90,16,0,17,200,18,90,19,0,20,200,21,90,22,0,23,200,24,90,25,0,26,200,27,90,28,0,29,200,30,90,31,0,32,200</FixtureVal>
+  <Function ID="41" Type="Scene" Name="Lauflicht oben+unten 0" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">1,0</FixtureVal>
+   <FixtureVal ID="1">1,0</FixtureVal>
   </Function>
-  <Function ID="36" Type="Scene" Name="Farben versetzt 2" Path="Retro Wash/Farben">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,200,9,70,10,0,15,200,16,70,17,0,18,200,19,70,20,0,21,200,22,70,23,0,24,200,25,70,26,0,27,200,28,70,29,0,30,200,31,70,32,0</FixtureVal>
-   <FixtureVal ID="1">8,0,9,20,10,200,15,0,16,20,17,200,18,0,19,20,20,200,21,0,22,20,23,200,24,0,25,20,26,200,27,0,28,20,29,200,30,0,31,20,32,200</FixtureVal>
+  <Function ID="42" Type="Scene" Name="Lauflicht oben+unten 1" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,7,255</FixtureVal>
+   <FixtureVal ID="1">2,255,7,255</FixtureVal>
   </Function>
-  <Function ID="37" Type="Scene" Name="Farben versetzt 3" Path="Retro Wash/Farben">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,180,9,0,10,120,15,180,16,0,17,120,18,180,19,0,20,120,21,180,22,0,23,120,24,180,25,0,26,120,27,180,28,0,29,120,30,180,31,0,32,120</FixtureVal>
-   <FixtureVal ID="1">8,0,9,120,10,140,15,0,16,120,17,140,18,0,19,120,20,140,21,0,22,120,23,140,24,0,25,120,26,140,27,0,28,120,29,140,30,0,31,120,32,140</FixtureVal>
+  <Function ID="43" Type="Scene" Name="Lauflicht oben+unten 2" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,6,255,7,255</FixtureVal>
+   <FixtureVal ID="1">2,255,3,255,6,255,7,255</FixtureVal>
   </Function>
-  <Function ID="38" Type="Scene" Name="Farben versetzt 4" Path="Retro Wash/Farben">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,90,9,0,10,200,15,90,16,0,17,200,18,90,19,0,20,200,21,90,22,0,23,200,24,90,25,0,26,200,27,90,28,0,29,200,30,90,31,0,32,200</FixtureVal>
-   <FixtureVal ID="1">8,200,9,0,10,20,15,200,16,0,17,20,18,200,19,0,20,20,21,200,22,0,23,20,24,200,25,0,26,20,27,200,28,0,29,20,30,200,31,0,32,20</FixtureVal>
-  </Function>
-  <Function ID="39" Type="Scene" Name="Farben versetzt 5" Path="Retro Wash/Farben">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,0,9,20,10,200,15,0,16,20,17,200,18,0,19,20,20,200,21,0,22,20,23,200,24,0,25,20,26,200,27,0,28,20,29,200,30,0,31,20,32,200</FixtureVal>
-   <FixtureVal ID="1">8,200,9,70,10,0,15,200,16,70,17,0,18,200,19,70,20,0,21,200,22,70,23,0,24,200,25,70,26,0,27,200,28,70,29,0,30,200,31,70,32,0</FixtureVal>
-  </Function>
-  <Function ID="40" Type="Scene" Name="Farben versetzt 6" Path="Retro Wash/Farben">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,0,9,120,10,140,15,0,16,120,17,140,18,0,19,120,20,140,21,0,22,120,23,140,24,0,25,120,26,140,27,0,28,120,29,140,30,0,31,120,32,140</FixtureVal>
-   <FixtureVal ID="1">8,180,9,0,10,120,15,180,16,0,17,120,18,180,19,0,20,120,21,180,22,0,23,120,24,180,25,0,26,120,27,180,28,0,29,120,30,180,31,0,32,120</FixtureVal>
-  </Function>
-  <Function ID="41" Type="Chaser" Name="RGB Farbwechsel versetzt" Path="Retro Wash/Farben">
-   <Speed FadeIn="8000" FadeOut="8000" Duration="16000"/>
-   <Direction>Forward</Direction>
-   <RunOrder>Loop</RunOrder>
-   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
-   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">35</Step>
-   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">36</Step>
-   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">37</Step>
-   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">38</Step>
-   <Step Number="4" FadeIn="0" Hold="0" FadeOut="0">39</Step>
-   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">40</Step>
-  </Function>
-  <Function ID="42" Type="Scene" Name="Alle COBs voll" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="44" Type="Scene" Name="Lauflicht oben+unten 3" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
    <FixtureVal ID="1">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
   </Function>
-  <Function ID="43" Type="Chaser" Name="Aktion: Alle COBs 5 s" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="400" FadeOut="1500" Duration="5400"/>
+  <Function ID="45" Type="Chaser" Name="COB Lauflicht oben+unten" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="600" Duration="1200" />
+   <Direction>Forward</Direction>
+   <RunOrder>PingPong</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common" />
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">41</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">42</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">43</Step>
+   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">44</Step>
+  </Function>
+  <Function ID="46" Type="Scene" Name="Lauflicht farbig 1" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,15,0,16,255,17,255</FixtureVal>
+  </Function>
+  <Function ID="47" Type="Scene" Name="Lauflicht farbig 2" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">3,255,18,0,19,255,20,255</FixtureVal>
+  </Function>
+  <Function ID="48" Type="Scene" Name="Lauflicht farbig 3" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">4,255,21,0,22,255,23,255</FixtureVal>
+  </Function>
+  <Function ID="49" Type="Scene" Name="Lauflicht farbig 4" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">5,255,24,0,25,255,26,255</FixtureVal>
+  </Function>
+  <Function ID="50" Type="Scene" Name="Lauflicht farbig 5" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">6,255,27,0,28,255,29,255</FixtureVal>
+  </Function>
+  <Function ID="51" Type="Scene" Name="Lauflicht farbig 6" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">7,255,30,0,31,255,32,255</FixtureVal>
+  </Function>
+  <Function ID="52" Type="Scene" Name="Lauflicht farbig 7" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">2,255,15,255,16,0,17,255</FixtureVal>
+  </Function>
+  <Function ID="53" Type="Scene" Name="Lauflicht farbig 8" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">3,255,18,255,19,0,20,255</FixtureVal>
+  </Function>
+  <Function ID="54" Type="Scene" Name="Lauflicht farbig 9" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">4,255,21,255,22,0,23,255</FixtureVal>
+  </Function>
+  <Function ID="55" Type="Scene" Name="Lauflicht farbig 10" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">5,255,24,255,25,0,26,255</FixtureVal>
+  </Function>
+  <Function ID="56" Type="Scene" Name="Lauflicht farbig 11" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">6,255,27,255,28,0,29,255</FixtureVal>
+  </Function>
+  <Function ID="57" Type="Scene" Name="Lauflicht farbig 12" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">7,255,30,255,31,0,32,255</FixtureVal>
+  </Function>
+  <Function ID="58" Type="Chaser" Name="COB Lauflicht farbig" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="1200" FadeOut="2400" Duration="1200" />
+   <Direction>Forward</Direction>
+   <RunOrder>PingPong</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common" />
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">46</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">47</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">48</Step>
+   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">49</Step>
+   <Step Number="4" FadeIn="0" Hold="0" FadeOut="0">50</Step>
+   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">51</Step>
+   <Step Number="6" FadeIn="0" Hold="0" FadeOut="0">52</Step>
+   <Step Number="7" FadeIn="0" Hold="0" FadeOut="0">53</Step>
+   <Step Number="8" FadeIn="0" Hold="0" FadeOut="0">54</Step>
+   <Step Number="9" FadeIn="0" Hold="0" FadeOut="0">55</Step>
+   <Step Number="10" FadeIn="0" Hold="0" FadeOut="0">56</Step>
+   <Step Number="11" FadeIn="0" Hold="0" FadeOut="0">57</Step>
+  </Function>
+  <Function ID="59" Type="Scene" Name="Glimmen (Grundlicht)" Path="Retro Wash/Lauflicht">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,30,3,30,4,30,5,30,6,30,7,30</FixtureVal>
+   <FixtureVal ID="1">2,30,3,30,4,30,5,30,6,30,7,30</FixtureVal>
+  </Function>
+  <Function ID="60" Type="Scene" Name="Farbe Rubin" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,200,9,0,10,20,15,200,16,0,17,20,18,200,19,0,20,20,21,200,22,0,23,20,24,200,25,0,26,20,27,200,28,0,29,20,30,200,31,0,32,20</FixtureVal>
+   <FixtureVal ID="1">8,200,9,0,10,20,15,200,16,0,17,20,18,200,19,0,20,20,21,200,22,0,23,20,24,200,25,0,26,20,27,200,28,0,29,20,30,200,31,0,32,20</FixtureVal>
+  </Function>
+  <Function ID="61" Type="Scene" Name="Farbe Bernstein" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,200,9,70,10,0,15,200,16,70,17,0,18,200,19,70,20,0,21,200,22,70,23,0,24,200,25,70,26,0,27,200,28,70,29,0,30,200,31,70,32,0</FixtureVal>
+   <FixtureVal ID="1">8,200,9,70,10,0,15,200,16,70,17,0,18,200,19,70,20,0,21,200,22,70,23,0,24,200,25,70,26,0,27,200,28,70,29,0,30,200,31,70,32,0</FixtureVal>
+  </Function>
+  <Function ID="62" Type="Scene" Name="Farbe Magenta" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,180,9,0,10,120,15,180,16,0,17,120,18,180,19,0,20,120,21,180,22,0,23,120,24,180,25,0,26,120,27,180,28,0,29,120,30,180,31,0,32,120</FixtureVal>
+   <FixtureVal ID="1">8,180,9,0,10,120,15,180,16,0,17,120,18,180,19,0,20,120,21,180,22,0,23,120,24,180,25,0,26,120,27,180,28,0,29,120,30,180,31,0,32,120</FixtureVal>
+  </Function>
+  <Function ID="63" Type="Scene" Name="Farbe Violett" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,90,9,0,10,200,15,90,16,0,17,200,18,90,19,0,20,200,21,90,22,0,23,200,24,90,25,0,26,200,27,90,28,0,29,200,30,90,31,0,32,200</FixtureVal>
+   <FixtureVal ID="1">8,90,9,0,10,200,15,90,16,0,17,200,18,90,19,0,20,200,21,90,22,0,23,200,24,90,25,0,26,200,27,90,28,0,29,200,30,90,31,0,32,200</FixtureVal>
+  </Function>
+  <Function ID="64" Type="Scene" Name="Farbe Tiefblau" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,0,9,20,10,200,15,0,16,20,17,200,18,0,19,20,20,200,21,0,22,20,23,200,24,0,25,20,26,200,27,0,28,20,29,200,30,0,31,20,32,200</FixtureVal>
+   <FixtureVal ID="1">8,0,9,20,10,200,15,0,16,20,17,200,18,0,19,20,20,200,21,0,22,20,23,200,24,0,25,20,26,200,27,0,28,20,29,200,30,0,31,20,32,200</FixtureVal>
+  </Function>
+  <Function ID="65" Type="Scene" Name="Farbe Petrol" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,0,9,120,10,140,15,0,16,120,17,140,18,0,19,120,20,140,21,0,22,120,23,140,24,0,25,120,26,140,27,0,28,120,29,140,30,0,31,120,32,140</FixtureVal>
+   <FixtureVal ID="1">8,0,9,120,10,140,15,0,16,120,17,140,18,0,19,120,20,140,21,0,22,120,23,140,24,0,25,120,26,140,27,0,28,120,29,140,30,0,31,120,32,140</FixtureVal>
+  </Function>
+  <Function ID="66" Type="Chaser" Name="RGB Farbwechsel synchron" Path="Retro Wash/Farben">
+   <Speed FadeIn="8000" FadeOut="8000" Duration="16000" />
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common" />
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">60</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">61</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">62</Step>
+   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">63</Step>
+   <Step Number="4" FadeIn="0" Hold="0" FadeOut="0">64</Step>
+   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">65</Step>
+  </Function>
+  <Function ID="67" Type="Scene" Name="Farben versetzt 1" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,200,9,0,10,20,15,200,16,0,17,20,18,200,19,0,20,20,21,200,22,0,23,20,24,200,25,0,26,20,27,200,28,0,29,20,30,200,31,0,32,20</FixtureVal>
+   <FixtureVal ID="1">8,90,9,0,10,200,15,90,16,0,17,200,18,90,19,0,20,200,21,90,22,0,23,200,24,90,25,0,26,200,27,90,28,0,29,200,30,90,31,0,32,200</FixtureVal>
+  </Function>
+  <Function ID="68" Type="Scene" Name="Farben versetzt 2" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,200,9,70,10,0,15,200,16,70,17,0,18,200,19,70,20,0,21,200,22,70,23,0,24,200,25,70,26,0,27,200,28,70,29,0,30,200,31,70,32,0</FixtureVal>
+   <FixtureVal ID="1">8,0,9,20,10,200,15,0,16,20,17,200,18,0,19,20,20,200,21,0,22,20,23,200,24,0,25,20,26,200,27,0,28,20,29,200,30,0,31,20,32,200</FixtureVal>
+  </Function>
+  <Function ID="69" Type="Scene" Name="Farben versetzt 3" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,180,9,0,10,120,15,180,16,0,17,120,18,180,19,0,20,120,21,180,22,0,23,120,24,180,25,0,26,120,27,180,28,0,29,120,30,180,31,0,32,120</FixtureVal>
+   <FixtureVal ID="1">8,0,9,120,10,140,15,0,16,120,17,140,18,0,19,120,20,140,21,0,22,120,23,140,24,0,25,120,26,140,27,0,28,120,29,140,30,0,31,120,32,140</FixtureVal>
+  </Function>
+  <Function ID="70" Type="Scene" Name="Farben versetzt 4" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,90,9,0,10,200,15,90,16,0,17,200,18,90,19,0,20,200,21,90,22,0,23,200,24,90,25,0,26,200,27,90,28,0,29,200,30,90,31,0,32,200</FixtureVal>
+   <FixtureVal ID="1">8,200,9,0,10,20,15,200,16,0,17,20,18,200,19,0,20,20,21,200,22,0,23,20,24,200,25,0,26,20,27,200,28,0,29,20,30,200,31,0,32,20</FixtureVal>
+  </Function>
+  <Function ID="71" Type="Scene" Name="Farben versetzt 5" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,0,9,20,10,200,15,0,16,20,17,200,18,0,19,20,20,200,21,0,22,20,23,200,24,0,25,20,26,200,27,0,28,20,29,200,30,0,31,20,32,200</FixtureVal>
+   <FixtureVal ID="1">8,200,9,70,10,0,15,200,16,70,17,0,18,200,19,70,20,0,21,200,22,70,23,0,24,200,25,70,26,0,27,200,28,70,29,0,30,200,31,70,32,0</FixtureVal>
+  </Function>
+  <Function ID="72" Type="Scene" Name="Farben versetzt 6" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,0,9,120,10,140,15,0,16,120,17,140,18,0,19,120,20,140,21,0,22,120,23,140,24,0,25,120,26,140,27,0,28,120,29,140,30,0,31,120,32,140</FixtureVal>
+   <FixtureVal ID="1">8,180,9,0,10,120,15,180,16,0,17,120,18,180,19,0,20,120,21,180,22,0,23,120,24,180,25,0,26,120,27,180,28,0,29,120,30,180,31,0,32,120</FixtureVal>
+  </Function>
+  <Function ID="73" Type="Chaser" Name="RGB Farbwechsel versetzt" Path="Retro Wash/Farben">
+   <Speed FadeIn="8000" FadeOut="8000" Duration="16000" />
+   <Direction>Forward</Direction>
+   <RunOrder>Loop</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common" />
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">67</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">68</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">69</Step>
+   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">70</Step>
+   <Step Number="4" FadeIn="0" Hold="0" FadeOut="0">71</Step>
+   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">72</Step>
+  </Function>
+  <Function ID="74" Type="Scene" Name="Ringlauf 1" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">30,0,31,160,32,255</FixtureVal>
+   <FixtureVal ID="1">30,0,31,160,32,255</FixtureVal>
+  </Function>
+  <Function ID="75" Type="Scene" Name="Ringlauf 2" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">27,0,28,160,29,255</FixtureVal>
+   <FixtureVal ID="1">27,0,28,160,29,255</FixtureVal>
+  </Function>
+  <Function ID="76" Type="Scene" Name="Ringlauf 3" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">24,0,25,160,26,255</FixtureVal>
+   <FixtureVal ID="1">24,0,25,160,26,255</FixtureVal>
+  </Function>
+  <Function ID="77" Type="Scene" Name="Ringlauf 4" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">21,0,22,160,23,255</FixtureVal>
+   <FixtureVal ID="1">21,0,22,160,23,255</FixtureVal>
+  </Function>
+  <Function ID="78" Type="Scene" Name="Ringlauf 5" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">18,0,19,160,20,255</FixtureVal>
+   <FixtureVal ID="1">18,0,19,160,20,255</FixtureVal>
+  </Function>
+  <Function ID="79" Type="Scene" Name="Ringlauf 6" Path="Retro Wash/Farben">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">15,0,16,160,17,255</FixtureVal>
+   <FixtureVal ID="1">15,0,16,160,17,255</FixtureVal>
+  </Function>
+  <Function ID="80" Type="Chaser" Name="RGB Ringlauf gegen Lauflicht" Path="Retro Wash/Farben">
+   <Speed FadeIn="1200" FadeOut="2400" Duration="1200" />
+   <Direction>Forward</Direction>
+   <RunOrder>PingPong</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common" />
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">74</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">75</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">76</Step>
+   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">77</Step>
+   <Step Number="4" FadeIn="0" Hold="0" FadeOut="0">78</Step>
+   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">79</Step>
+  </Function>
+  <Function ID="81" Type="Scene" Name="Alle COBs voll" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
+   <FixtureVal ID="1">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
+  </Function>
+  <Function ID="82" Type="Chaser" Name="Aktion: Alle COBs 5 s" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="400" FadeOut="1500" Duration="5400" />
    <Direction>Forward</Direction>
    <RunOrder>SingleShot</RunOrder>
-   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
-   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">42</Step>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common" />
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">81</Step>
   </Function>
-  <Function ID="44" Type="Scene" Name="Herz stark" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="83" Type="Scene" Name="Herz stark" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255,7,255,8,255,9,0,10,0,15,255,16,0,17,0,18,255,19,0,20,0,21,255,22,0,23,0,24,255,25,0,26,0,27,255,28,0,29,0,30,255,31,0,32,0</FixtureVal>
    <FixtureVal ID="1">2,255,3,255,4,255,5,255,6,255,7,255,8,255,9,0,10,0,15,255,16,0,17,0,18,255,19,0,20,0,21,255,22,0,23,0,24,255,25,0,26,0,27,255,28,0,29,0,30,255,31,0,32,0</FixtureVal>
   </Function>
-  <Function ID="45" Type="Scene" Name="Herz schwach" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="84" Type="Scene" Name="Herz schwach" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">2,140,3,140,4,140,5,140,6,140,7,140,8,140,9,0,10,0,15,140,16,0,17,0,18,140,19,0,20,0,21,140,22,0,23,0,24,140,25,0,26,0,27,140,28,0,29,0,30,140,31,0,32,0</FixtureVal>
    <FixtureVal ID="1">2,140,3,140,4,140,5,140,6,140,7,140,8,140,9,0,10,0,15,140,16,0,17,0,18,140,19,0,20,0,21,140,22,0,23,0,24,140,25,0,26,0,27,140,28,0,29,0,30,140,31,0,32,0</FixtureVal>
   </Function>
-  <Function ID="46" Type="Scene" Name="Herz Pause" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="85" Type="Scene" Name="Herz Pause" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">1,0</FixtureVal>
    <FixtureVal ID="1">1,0</FixtureVal>
   </Function>
-  <Function ID="47" Type="Chaser" Name="Aktion: Herzschlag" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="86" Type="Chaser" Name="Aktion: Herzschlag" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <Direction>Forward</Direction>
    <RunOrder>SingleShot</RunOrder>
-   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
-   <Step Number="0" FadeIn="40" Hold="60" FadeOut="220">44</Step>
-   <Step Number="1" FadeIn="0" Hold="200" FadeOut="0">46</Step>
-   <Step Number="2" FadeIn="40" Hold="40" FadeOut="300">45</Step>
-   <Step Number="3" FadeIn="0" Hold="389" FadeOut="0">46</Step>
-   <Step Number="4" FadeIn="40" Hold="60" FadeOut="220">44</Step>
-   <Step Number="5" FadeIn="0" Hold="200" FadeOut="0">46</Step>
-   <Step Number="6" FadeIn="40" Hold="40" FadeOut="300">45</Step>
-   <Step Number="7" FadeIn="0" Hold="389" FadeOut="0">46</Step>
-   <Step Number="8" FadeIn="40" Hold="60" FadeOut="220">44</Step>
-   <Step Number="9" FadeIn="0" Hold="202" FadeOut="0">46</Step>
-   <Step Number="10" FadeIn="40" Hold="40" FadeOut="300">45</Step>
-   <Step Number="11" FadeIn="0" Hold="407" FadeOut="0">46</Step>
-   <Step Number="12" FadeIn="40" Hold="60" FadeOut="220">44</Step>
-   <Step Number="13" FadeIn="0" Hold="204" FadeOut="0">46</Step>
-   <Step Number="14" FadeIn="40" Hold="40" FadeOut="300">45</Step>
-   <Step Number="15" FadeIn="0" Hold="427" FadeOut="0">46</Step>
-   <Step Number="16" FadeIn="40" Hold="60" FadeOut="220">44</Step>
-   <Step Number="17" FadeIn="0" Hold="206" FadeOut="0">46</Step>
-   <Step Number="18" FadeIn="40" Hold="40" FadeOut="300">45</Step>
-   <Step Number="19" FadeIn="0" Hold="447" FadeOut="0">46</Step>
-   <Step Number="20" FadeIn="40" Hold="60" FadeOut="220">44</Step>
-   <Step Number="21" FadeIn="0" Hold="208" FadeOut="0">46</Step>
-   <Step Number="22" FadeIn="40" Hold="40" FadeOut="300">45</Step>
-   <Step Number="23" FadeIn="0" Hold="469" FadeOut="0">46</Step>
-   <Step Number="24" FadeIn="40" Hold="60" FadeOut="220">44</Step>
-   <Step Number="25" FadeIn="0" Hold="210" FadeOut="0">46</Step>
-   <Step Number="26" FadeIn="40" Hold="40" FadeOut="300">45</Step>
-   <Step Number="27" FadeIn="0" Hold="492" FadeOut="0">46</Step>
-   <Step Number="28" FadeIn="40" Hold="60" FadeOut="220">44</Step>
-   <Step Number="29" FadeIn="0" Hold="212" FadeOut="0">46</Step>
-   <Step Number="30" FadeIn="40" Hold="40" FadeOut="300">45</Step>
-   <Step Number="31" FadeIn="0" Hold="517" FadeOut="0">46</Step>
-   <Step Number="32" FadeIn="40" Hold="60" FadeOut="220">44</Step>
-   <Step Number="33" FadeIn="0" Hold="215" FadeOut="0">46</Step>
-   <Step Number="34" FadeIn="40" Hold="40" FadeOut="300">45</Step>
-   <Step Number="35" FadeIn="0" Hold="557" FadeOut="0">46</Step>
-   <Step Number="36" FadeIn="40" Hold="60" FadeOut="220">44</Step>
-   <Step Number="37" FadeIn="0" Hold="218" FadeOut="0">46</Step>
-   <Step Number="38" FadeIn="40" Hold="40" FadeOut="300">45</Step>
-   <Step Number="39" FadeIn="0" Hold="602" FadeOut="0">46</Step>
-   <Step Number="40" FadeIn="40" Hold="60" FadeOut="220">44</Step>
-   <Step Number="41" FadeIn="0" Hold="220" FadeOut="0">46</Step>
-   <Step Number="42" FadeIn="40" Hold="40" FadeOut="1000">45</Step>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep" />
+   <Step Number="0" FadeIn="40" Hold="60" FadeOut="220">83</Step>
+   <Step Number="1" FadeIn="0" Hold="200" FadeOut="0">85</Step>
+   <Step Number="2" FadeIn="40" Hold="40" FadeOut="300">84</Step>
+   <Step Number="3" FadeIn="0" Hold="389" FadeOut="0">85</Step>
+   <Step Number="4" FadeIn="40" Hold="60" FadeOut="220">83</Step>
+   <Step Number="5" FadeIn="0" Hold="200" FadeOut="0">85</Step>
+   <Step Number="6" FadeIn="40" Hold="40" FadeOut="300">84</Step>
+   <Step Number="7" FadeIn="0" Hold="389" FadeOut="0">85</Step>
+   <Step Number="8" FadeIn="40" Hold="60" FadeOut="220">83</Step>
+   <Step Number="9" FadeIn="0" Hold="202" FadeOut="0">85</Step>
+   <Step Number="10" FadeIn="40" Hold="40" FadeOut="300">84</Step>
+   <Step Number="11" FadeIn="0" Hold="407" FadeOut="0">85</Step>
+   <Step Number="12" FadeIn="40" Hold="60" FadeOut="220">83</Step>
+   <Step Number="13" FadeIn="0" Hold="204" FadeOut="0">85</Step>
+   <Step Number="14" FadeIn="40" Hold="40" FadeOut="300">84</Step>
+   <Step Number="15" FadeIn="0" Hold="427" FadeOut="0">85</Step>
+   <Step Number="16" FadeIn="40" Hold="60" FadeOut="220">83</Step>
+   <Step Number="17" FadeIn="0" Hold="206" FadeOut="0">85</Step>
+   <Step Number="18" FadeIn="40" Hold="40" FadeOut="300">84</Step>
+   <Step Number="19" FadeIn="0" Hold="447" FadeOut="0">85</Step>
+   <Step Number="20" FadeIn="40" Hold="60" FadeOut="220">83</Step>
+   <Step Number="21" FadeIn="0" Hold="208" FadeOut="0">85</Step>
+   <Step Number="22" FadeIn="40" Hold="40" FadeOut="300">84</Step>
+   <Step Number="23" FadeIn="0" Hold="469" FadeOut="0">85</Step>
+   <Step Number="24" FadeIn="40" Hold="60" FadeOut="220">83</Step>
+   <Step Number="25" FadeIn="0" Hold="210" FadeOut="0">85</Step>
+   <Step Number="26" FadeIn="40" Hold="40" FadeOut="300">84</Step>
+   <Step Number="27" FadeIn="0" Hold="492" FadeOut="0">85</Step>
+   <Step Number="28" FadeIn="40" Hold="60" FadeOut="220">83</Step>
+   <Step Number="29" FadeIn="0" Hold="212" FadeOut="0">85</Step>
+   <Step Number="30" FadeIn="40" Hold="40" FadeOut="300">84</Step>
+   <Step Number="31" FadeIn="0" Hold="517" FadeOut="0">85</Step>
+   <Step Number="32" FadeIn="40" Hold="60" FadeOut="220">83</Step>
+   <Step Number="33" FadeIn="0" Hold="215" FadeOut="0">85</Step>
+   <Step Number="34" FadeIn="40" Hold="40" FadeOut="300">84</Step>
+   <Step Number="35" FadeIn="0" Hold="557" FadeOut="0">85</Step>
+   <Step Number="36" FadeIn="40" Hold="60" FadeOut="220">83</Step>
+   <Step Number="37" FadeIn="0" Hold="218" FadeOut="0">85</Step>
+   <Step Number="38" FadeIn="40" Hold="40" FadeOut="300">84</Step>
+   <Step Number="39" FadeIn="0" Hold="602" FadeOut="0">85</Step>
+   <Step Number="40" FadeIn="40" Hold="60" FadeOut="220">83</Step>
+   <Step Number="41" FadeIn="0" Hold="220" FadeOut="0">85</Step>
+   <Step Number="42" FadeIn="40" Hold="40" FadeOut="1000">84</Step>
   </Function>
-  <Function ID="48" Type="Scene" Name="Welle 1" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="87" Type="Scene" Name="Welle 1" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">2,255,15,255,16,255,17,255</FixtureVal>
   </Function>
-  <Function ID="49" Type="Scene" Name="Welle 2" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="88" Type="Scene" Name="Welle 2" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">3,255,18,255,19,255,20,255</FixtureVal>
   </Function>
-  <Function ID="50" Type="Scene" Name="Welle 3" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="89" Type="Scene" Name="Welle 3" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">4,255,21,255,22,255,23,255</FixtureVal>
   </Function>
-  <Function ID="51" Type="Scene" Name="Welle 4" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="90" Type="Scene" Name="Welle 4" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">5,255,24,255,25,255,26,255</FixtureVal>
   </Function>
-  <Function ID="52" Type="Scene" Name="Welle 5" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="91" Type="Scene" Name="Welle 5" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">6,255,27,255,28,255,29,255</FixtureVal>
   </Function>
-  <Function ID="53" Type="Scene" Name="Welle 6" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="92" Type="Scene" Name="Welle 6" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">7,255,30,255,31,255,32,255</FixtureVal>
   </Function>
-  <Function ID="54" Type="Scene" Name="Welle 7" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="93" Type="Scene" Name="Welle 7" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="1">2,255,15,255,16,255,17,255</FixtureVal>
   </Function>
-  <Function ID="55" Type="Scene" Name="Welle 8" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="94" Type="Scene" Name="Welle 8" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="1">3,255,18,255,19,255,20,255</FixtureVal>
   </Function>
-  <Function ID="56" Type="Scene" Name="Welle 9" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="95" Type="Scene" Name="Welle 9" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="1">4,255,21,255,22,255,23,255</FixtureVal>
   </Function>
-  <Function ID="57" Type="Scene" Name="Welle 10" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="96" Type="Scene" Name="Welle 10" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="1">5,255,24,255,25,255,26,255</FixtureVal>
   </Function>
-  <Function ID="58" Type="Scene" Name="Welle 11" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="97" Type="Scene" Name="Welle 11" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="1">6,255,27,255,28,255,29,255</FixtureVal>
   </Function>
-  <Function ID="59" Type="Scene" Name="Welle 12" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="98" Type="Scene" Name="Welle 12" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="1">7,255,30,255,31,255,32,255</FixtureVal>
   </Function>
-  <Function ID="60" Type="Chaser" Name="Aktion: Welle" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="120" FadeOut="900" Duration="200"/>
+  <Function ID="99" Type="Chaser" Name="Aktion: Welle" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="60" FadeOut="500" Duration="100" />
    <Direction>Forward</Direction>
    <RunOrder>SingleShot</RunOrder>
-   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common"/>
-   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">48</Step>
-   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">49</Step>
-   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">50</Step>
-   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">51</Step>
-   <Step Number="4" FadeIn="0" Hold="0" FadeOut="0">52</Step>
-   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">53</Step>
-   <Step Number="6" FadeIn="0" Hold="0" FadeOut="0">54</Step>
-   <Step Number="7" FadeIn="0" Hold="0" FadeOut="0">55</Step>
-   <Step Number="8" FadeIn="0" Hold="0" FadeOut="0">56</Step>
-   <Step Number="9" FadeIn="0" Hold="0" FadeOut="0">57</Step>
-   <Step Number="10" FadeIn="0" Hold="0" FadeOut="0">58</Step>
-   <Step Number="11" FadeIn="0" Hold="0" FadeOut="0">59</Step>
-   <Step Number="12" FadeIn="0" Hold="0" FadeOut="0">58</Step>
-   <Step Number="13" FadeIn="0" Hold="0" FadeOut="0">57</Step>
-   <Step Number="14" FadeIn="0" Hold="0" FadeOut="0">56</Step>
-   <Step Number="15" FadeIn="0" Hold="0" FadeOut="0">55</Step>
-   <Step Number="16" FadeIn="0" Hold="0" FadeOut="0">54</Step>
-   <Step Number="17" FadeIn="0" Hold="0" FadeOut="0">53</Step>
-   <Step Number="18" FadeIn="0" Hold="0" FadeOut="0">52</Step>
-   <Step Number="19" FadeIn="0" Hold="0" FadeOut="0">51</Step>
-   <Step Number="20" FadeIn="0" Hold="0" FadeOut="0">50</Step>
-   <Step Number="21" FadeIn="0" Hold="0" FadeOut="0">49</Step>
-   <Step Number="22" FadeIn="0" Hold="0" FadeOut="0">48</Step>
-   <Step Number="23" FadeIn="0" Hold="0" FadeOut="0">49</Step>
-   <Step Number="24" FadeIn="0" Hold="0" FadeOut="0">50</Step>
-   <Step Number="25" FadeIn="0" Hold="0" FadeOut="0">51</Step>
-   <Step Number="26" FadeIn="0" Hold="0" FadeOut="0">52</Step>
-   <Step Number="27" FadeIn="0" Hold="0" FadeOut="0">53</Step>
-   <Step Number="28" FadeIn="0" Hold="0" FadeOut="0">54</Step>
-   <Step Number="29" FadeIn="0" Hold="0" FadeOut="0">55</Step>
-   <Step Number="30" FadeIn="0" Hold="0" FadeOut="0">56</Step>
-   <Step Number="31" FadeIn="0" Hold="0" FadeOut="0">57</Step>
-   <Step Number="32" FadeIn="0" Hold="0" FadeOut="0">58</Step>
-   <Step Number="33" FadeIn="0" Hold="0" FadeOut="0">59</Step>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common" />
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">87</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">88</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">89</Step>
+   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">90</Step>
+   <Step Number="4" FadeIn="0" Hold="0" FadeOut="0">91</Step>
+   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">92</Step>
+   <Step Number="6" FadeIn="0" Hold="0" FadeOut="0">93</Step>
+   <Step Number="7" FadeIn="0" Hold="0" FadeOut="0">94</Step>
+   <Step Number="8" FadeIn="0" Hold="0" FadeOut="0">95</Step>
+   <Step Number="9" FadeIn="0" Hold="0" FadeOut="0">96</Step>
+   <Step Number="10" FadeIn="0" Hold="0" FadeOut="0">97</Step>
+   <Step Number="11" FadeIn="0" Hold="0" FadeOut="0">98</Step>
+   <Step Number="12" FadeIn="0" Hold="0" FadeOut="0">97</Step>
+   <Step Number="13" FadeIn="0" Hold="0" FadeOut="0">96</Step>
+   <Step Number="14" FadeIn="0" Hold="0" FadeOut="0">95</Step>
+   <Step Number="15" FadeIn="0" Hold="0" FadeOut="0">94</Step>
+   <Step Number="16" FadeIn="0" Hold="0" FadeOut="0">93</Step>
+   <Step Number="17" FadeIn="0" Hold="0" FadeOut="0">92</Step>
+   <Step Number="18" FadeIn="0" Hold="0" FadeOut="0">91</Step>
+   <Step Number="19" FadeIn="0" Hold="0" FadeOut="0">90</Step>
+   <Step Number="20" FadeIn="0" Hold="0" FadeOut="0">89</Step>
+   <Step Number="21" FadeIn="0" Hold="0" FadeOut="0">88</Step>
+   <Step Number="22" FadeIn="0" Hold="0" FadeOut="0">87</Step>
+   <Step Number="23" FadeIn="0" Hold="0" FadeOut="0">88</Step>
+   <Step Number="24" FadeIn="0" Hold="0" FadeOut="0">89</Step>
+   <Step Number="25" FadeIn="0" Hold="0" FadeOut="0">90</Step>
+   <Step Number="26" FadeIn="0" Hold="0" FadeOut="0">91</Step>
+   <Step Number="27" FadeIn="0" Hold="0" FadeOut="0">92</Step>
+   <Step Number="28" FadeIn="0" Hold="0" FadeOut="0">93</Step>
+   <Step Number="29" FadeIn="0" Hold="0" FadeOut="0">94</Step>
+   <Step Number="30" FadeIn="0" Hold="0" FadeOut="0">95</Step>
+   <Step Number="31" FadeIn="0" Hold="0" FadeOut="0">96</Step>
+   <Step Number="32" FadeIn="0" Hold="0" FadeOut="0">97</Step>
+   <Step Number="33" FadeIn="0" Hold="0" FadeOut="0">98</Step>
+   <Step Number="34" FadeIn="0" Hold="0" FadeOut="0">97</Step>
+   <Step Number="35" FadeIn="0" Hold="0" FadeOut="0">96</Step>
+   <Step Number="36" FadeIn="0" Hold="0" FadeOut="0">95</Step>
+   <Step Number="37" FadeIn="0" Hold="0" FadeOut="0">94</Step>
+   <Step Number="38" FadeIn="0" Hold="0" FadeOut="0">93</Step>
+   <Step Number="39" FadeIn="0" Hold="0" FadeOut="0">92</Step>
+   <Step Number="40" FadeIn="0" Hold="0" FadeOut="0">91</Step>
+   <Step Number="41" FadeIn="0" Hold="0" FadeOut="0">90</Step>
+   <Step Number="42" FadeIn="0" Hold="0" FadeOut="0">89</Step>
+   <Step Number="43" FadeIn="0" Hold="0" FadeOut="0">88</Step>
+   <Step Number="44" FadeIn="0" Hold="0" FadeOut="0">87</Step>
+   <Step Number="45" FadeIn="0" Hold="0" FadeOut="0">88</Step>
+   <Step Number="46" FadeIn="0" Hold="0" FadeOut="0">89</Step>
+   <Step Number="47" FadeIn="0" Hold="0" FadeOut="0">90</Step>
+   <Step Number="48" FadeIn="0" Hold="0" FadeOut="0">91</Step>
+   <Step Number="49" FadeIn="0" Hold="0" FadeOut="0">92</Step>
+   <Step Number="50" FadeIn="0" Hold="0" FadeOut="0">93</Step>
+   <Step Number="51" FadeIn="0" Hold="0" FadeOut="0">94</Step>
+   <Step Number="52" FadeIn="0" Hold="0" FadeOut="0">95</Step>
+   <Step Number="53" FadeIn="0" Hold="0" FadeOut="0">96</Step>
+   <Step Number="54" FadeIn="0" Hold="0" FadeOut="0">97</Step>
+   <Step Number="55" FadeIn="0" Hold="0" FadeOut="0">98</Step>
+   <Step Number="56" FadeIn="0" Hold="0" FadeOut="0">97</Step>
+   <Step Number="57" FadeIn="0" Hold="0" FadeOut="0">96</Step>
+   <Step Number="58" FadeIn="0" Hold="0" FadeOut="0">95</Step>
+   <Step Number="59" FadeIn="0" Hold="0" FadeOut="0">94</Step>
+   <Step Number="60" FadeIn="0" Hold="0" FadeOut="0">93</Step>
+   <Step Number="61" FadeIn="0" Hold="0" FadeOut="0">92</Step>
+   <Step Number="62" FadeIn="0" Hold="0" FadeOut="0">91</Step>
+   <Step Number="63" FadeIn="0" Hold="0" FadeOut="0">90</Step>
+   <Step Number="64" FadeIn="0" Hold="0" FadeOut="0">89</Step>
+   <Step Number="65" FadeIn="0" Hold="0" FadeOut="0">88</Step>
+   <Step Number="66" FadeIn="0" Hold="0" FadeOut="0">87</Step>
+   <Step Number="67" FadeIn="0" Hold="0" FadeOut="0">88</Step>
+   <Step Number="68" FadeIn="0" Hold="0" FadeOut="0">89</Step>
+   <Step Number="69" FadeIn="0" Hold="0" FadeOut="0">90</Step>
+   <Step Number="70" FadeIn="0" Hold="0" FadeOut="0">91</Step>
+   <Step Number="71" FadeIn="0" Hold="0" FadeOut="0">92</Step>
+   <Step Number="72" FadeIn="0" Hold="0" FadeOut="0">93</Step>
+   <Step Number="73" FadeIn="0" Hold="0" FadeOut="0">94</Step>
+   <Step Number="74" FadeIn="0" Hold="0" FadeOut="0">95</Step>
+   <Step Number="75" FadeIn="0" Hold="0" FadeOut="0">96</Step>
+   <Step Number="76" FadeIn="0" Hold="0" FadeOut="0">97</Step>
+   <Step Number="77" FadeIn="0" Hold="0" FadeOut="0">98</Step>
+   <Step Number="78" FadeIn="0" Hold="0" FadeOut="0">97</Step>
+   <Step Number="79" FadeIn="0" Hold="0" FadeOut="0">96</Step>
+   <Step Number="80" FadeIn="0" Hold="0" FadeOut="0">95</Step>
+   <Step Number="81" FadeIn="0" Hold="0" FadeOut="0">94</Step>
+   <Step Number="82" FadeIn="0" Hold="0" FadeOut="0">93</Step>
+   <Step Number="83" FadeIn="0" Hold="0" FadeOut="0">92</Step>
+   <Step Number="84" FadeIn="0" Hold="0" FadeOut="0">91</Step>
+   <Step Number="85" FadeIn="0" Hold="0" FadeOut="0">90</Step>
+   <Step Number="86" FadeIn="0" Hold="0" FadeOut="0">89</Step>
+   <Step Number="87" FadeIn="0" Hold="0" FadeOut="0">88</Step>
+   <Step Number="88" FadeIn="0" Hold="0" FadeOut="0">87</Step>
   </Function>
-  <Function ID="61" Type="Scene" Name="Blitz Pause" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="100" Type="Scene" Name="Schlange 1" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255</FixtureVal>
+  </Function>
+  <Function ID="101" Type="Scene" Name="Schlange 2" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">3,255</FixtureVal>
+  </Function>
+  <Function ID="102" Type="Scene" Name="Schlange 3" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">4,255</FixtureVal>
+  </Function>
+  <Function ID="103" Type="Scene" Name="Schlange 4" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">5,255</FixtureVal>
+  </Function>
+  <Function ID="104" Type="Scene" Name="Schlange 5" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">6,255</FixtureVal>
+  </Function>
+  <Function ID="105" Type="Scene" Name="Schlange 6" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">7,255</FixtureVal>
+  </Function>
+  <Function ID="106" Type="Scene" Name="Schlange 7" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">7,255</FixtureVal>
+  </Function>
+  <Function ID="107" Type="Scene" Name="Schlange 8" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">6,255</FixtureVal>
+  </Function>
+  <Function ID="108" Type="Scene" Name="Schlange 9" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">5,255</FixtureVal>
+  </Function>
+  <Function ID="109" Type="Scene" Name="Schlange 10" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">4,255</FixtureVal>
+  </Function>
+  <Function ID="110" Type="Scene" Name="Schlange 11" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">3,255</FixtureVal>
+  </Function>
+  <Function ID="111" Type="Scene" Name="Schlange 12" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">2,255</FixtureVal>
+  </Function>
+  <Function ID="112" Type="Chaser" Name="Aktion: Schlange" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="60" FadeOut="250" Duration="100" />
+   <Direction>Forward</Direction>
+   <RunOrder>SingleShot</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common" />
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">100</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">101</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">102</Step>
+   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">103</Step>
+   <Step Number="4" FadeIn="0" Hold="0" FadeOut="0">104</Step>
+   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">105</Step>
+   <Step Number="6" FadeIn="0" Hold="0" FadeOut="0">106</Step>
+   <Step Number="7" FadeIn="0" Hold="0" FadeOut="0">107</Step>
+   <Step Number="8" FadeIn="0" Hold="0" FadeOut="0">108</Step>
+   <Step Number="9" FadeIn="0" Hold="0" FadeOut="0">109</Step>
+   <Step Number="10" FadeIn="0" Hold="0" FadeOut="0">110</Step>
+   <Step Number="11" FadeIn="0" Hold="0" FadeOut="0">111</Step>
+   <Step Number="12" FadeIn="0" Hold="0" FadeOut="0">110</Step>
+   <Step Number="13" FadeIn="0" Hold="0" FadeOut="0">109</Step>
+   <Step Number="14" FadeIn="0" Hold="0" FadeOut="0">108</Step>
+   <Step Number="15" FadeIn="0" Hold="0" FadeOut="0">107</Step>
+   <Step Number="16" FadeIn="0" Hold="0" FadeOut="0">106</Step>
+   <Step Number="17" FadeIn="0" Hold="0" FadeOut="0">105</Step>
+   <Step Number="18" FadeIn="0" Hold="0" FadeOut="0">104</Step>
+   <Step Number="19" FadeIn="0" Hold="0" FadeOut="0">103</Step>
+   <Step Number="20" FadeIn="0" Hold="0" FadeOut="0">102</Step>
+   <Step Number="21" FadeIn="0" Hold="0" FadeOut="0">101</Step>
+   <Step Number="22" FadeIn="0" Hold="0" FadeOut="0">100</Step>
+   <Step Number="23" FadeIn="0" Hold="0" FadeOut="0">101</Step>
+   <Step Number="24" FadeIn="0" Hold="0" FadeOut="0">102</Step>
+   <Step Number="25" FadeIn="0" Hold="0" FadeOut="0">103</Step>
+   <Step Number="26" FadeIn="0" Hold="0" FadeOut="0">104</Step>
+   <Step Number="27" FadeIn="0" Hold="0" FadeOut="0">105</Step>
+   <Step Number="28" FadeIn="0" Hold="0" FadeOut="0">106</Step>
+   <Step Number="29" FadeIn="0" Hold="0" FadeOut="0">107</Step>
+   <Step Number="30" FadeIn="0" Hold="0" FadeOut="0">108</Step>
+   <Step Number="31" FadeIn="0" Hold="0" FadeOut="0">109</Step>
+   <Step Number="32" FadeIn="0" Hold="0" FadeOut="0">110</Step>
+   <Step Number="33" FadeIn="0" Hold="0" FadeOut="0">111</Step>
+   <Step Number="34" FadeIn="0" Hold="0" FadeOut="0">110</Step>
+   <Step Number="35" FadeIn="0" Hold="0" FadeOut="0">109</Step>
+   <Step Number="36" FadeIn="0" Hold="0" FadeOut="0">108</Step>
+   <Step Number="37" FadeIn="0" Hold="0" FadeOut="0">107</Step>
+   <Step Number="38" FadeIn="0" Hold="0" FadeOut="0">106</Step>
+   <Step Number="39" FadeIn="0" Hold="0" FadeOut="0">105</Step>
+   <Step Number="40" FadeIn="0" Hold="0" FadeOut="0">104</Step>
+   <Step Number="41" FadeIn="0" Hold="0" FadeOut="0">103</Step>
+   <Step Number="42" FadeIn="0" Hold="0" FadeOut="0">102</Step>
+   <Step Number="43" FadeIn="0" Hold="0" FadeOut="0">101</Step>
+   <Step Number="44" FadeIn="0" Hold="0" FadeOut="0">100</Step>
+   <Step Number="45" FadeIn="0" Hold="0" FadeOut="0">101</Step>
+   <Step Number="46" FadeIn="0" Hold="0" FadeOut="0">102</Step>
+   <Step Number="47" FadeIn="0" Hold="0" FadeOut="0">103</Step>
+   <Step Number="48" FadeIn="0" Hold="0" FadeOut="0">104</Step>
+   <Step Number="49" FadeIn="0" Hold="0" FadeOut="0">105</Step>
+   <Step Number="50" FadeIn="0" Hold="0" FadeOut="0">106</Step>
+   <Step Number="51" FadeIn="0" Hold="0" FadeOut="0">107</Step>
+   <Step Number="52" FadeIn="0" Hold="0" FadeOut="0">108</Step>
+   <Step Number="53" FadeIn="0" Hold="0" FadeOut="0">109</Step>
+   <Step Number="54" FadeIn="0" Hold="0" FadeOut="0">110</Step>
+   <Step Number="55" FadeIn="0" Hold="0" FadeOut="0">111</Step>
+   <Step Number="56" FadeIn="0" Hold="0" FadeOut="0">110</Step>
+   <Step Number="57" FadeIn="0" Hold="0" FadeOut="0">109</Step>
+   <Step Number="58" FadeIn="0" Hold="0" FadeOut="0">108</Step>
+   <Step Number="59" FadeIn="0" Hold="0" FadeOut="0">107</Step>
+   <Step Number="60" FadeIn="0" Hold="0" FadeOut="0">106</Step>
+   <Step Number="61" FadeIn="0" Hold="0" FadeOut="0">105</Step>
+   <Step Number="62" FadeIn="0" Hold="0" FadeOut="0">104</Step>
+   <Step Number="63" FadeIn="0" Hold="0" FadeOut="0">103</Step>
+   <Step Number="64" FadeIn="0" Hold="0" FadeOut="0">102</Step>
+   <Step Number="65" FadeIn="0" Hold="0" FadeOut="0">101</Step>
+   <Step Number="66" FadeIn="0" Hold="0" FadeOut="0">100</Step>
+  </Function>
+  <Function ID="113" Type="Scene" Name="oben+unten 0" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">1,0</FixtureVal>
    <FixtureVal ID="1">1,0</FixtureVal>
   </Function>
-  <Function ID="62" Type="Scene" Name="Blitz Cyan Gerät 1" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,0,9,255,10,255,15,0,16,255,17,255,18,0,19,255,20,255,21,0,22,255,23,255,24,0,25,255,26,255,27,0,28,255,29,255,30,0,31,255,32,255</FixtureVal>
+  <Function ID="114" Type="Scene" Name="oben+unten 1" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,7,255</FixtureVal>
+   <FixtureVal ID="1">2,255,7,255</FixtureVal>
   </Function>
-  <Function ID="63" Type="Scene" Name="Blitz Magenta Gerät 2" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="1">8,255,9,0,10,255,15,255,16,0,17,255,18,255,19,0,20,255,21,255,22,0,23,255,24,255,25,0,26,255,27,255,28,0,29,255,30,255,31,0,32,255</FixtureVal>
+  <Function ID="115" Type="Scene" Name="oben+unten 2" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,6,255,7,255</FixtureVal>
+   <FixtureVal ID="1">2,255,3,255,6,255,7,255</FixtureVal>
   </Function>
-  <Function ID="64" Type="Scene" Name="Blitz Weiß Gerät 1" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,255,9,255,10,255,15,255,16,255,17,255,18,255,19,255,20,255,21,255,22,255,23,255,24,255,25,255,26,255,27,255,28,255,29,255,30,255,31,255,32,255</FixtureVal>
+  <Function ID="116" Type="Scene" Name="oben+unten 3" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
+   <FixtureVal ID="1">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
   </Function>
-  <Function ID="65" Type="Scene" Name="Blitz Cyan Gerät 2" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="1">8,0,9,255,10,255,15,0,16,255,17,255,18,0,19,255,20,255,21,0,22,255,23,255,24,0,25,255,26,255,27,0,28,255,29,255,30,0,31,255,32,255</FixtureVal>
-  </Function>
-  <Function ID="66" Type="Scene" Name="Blitz Magenta Gerät 1" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,255,9,0,10,255,15,255,16,0,17,255,18,255,19,0,20,255,21,255,22,0,23,255,24,255,25,0,26,255,27,255,28,0,29,255,30,255,31,0,32,255</FixtureVal>
-  </Function>
-  <Function ID="67" Type="Scene" Name="Blitz Weiß Gerät 2" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="1">8,255,9,255,10,255,15,255,16,255,17,255,18,255,19,255,20,255,21,255,22,255,23,255,24,255,25,255,26,255,27,255,28,255,29,255,30,255,31,255,32,255</FixtureVal>
-  </Function>
-  <Function ID="68" Type="Scene" Name="Blitz Weiß alle" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,255,9,255,10,255,15,255,16,255,17,255,18,255,19,255,20,255,21,255,22,255,23,255,24,255,25,255,26,255,27,255,28,255,29,255,30,255,31,255,32,255</FixtureVal>
-   <FixtureVal ID="1">8,255,9,255,10,255,15,255,16,255,17,255,18,255,19,255,20,255,21,255,22,255,23,255,24,255,25,255,26,255,27,255,28,255,29,255,30,255,31,255,32,255</FixtureVal>
-  </Function>
-  <Function ID="69" Type="Chaser" Name="Aktion: Farbblitz" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="117" Type="Chaser" Name="Aktion: oben+unten" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <Direction>Forward</Direction>
    <RunOrder>SingleShot</RunOrder>
-   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep"/>
-   <Step Number="0" FadeIn="0" Hold="60" FadeOut="0">61</Step>
-   <Step Number="1" FadeIn="0" Hold="90" FadeOut="200">62</Step>
-   <Step Number="2" FadeIn="0" Hold="120" FadeOut="0">61</Step>
-   <Step Number="3" FadeIn="0" Hold="90" FadeOut="200">63</Step>
-   <Step Number="4" FadeIn="0" Hold="120" FadeOut="0">61</Step>
-   <Step Number="5" FadeIn="0" Hold="90" FadeOut="200">64</Step>
-   <Step Number="6" FadeIn="0" Hold="120" FadeOut="0">61</Step>
-   <Step Number="7" FadeIn="0" Hold="90" FadeOut="200">65</Step>
-   <Step Number="8" FadeIn="0" Hold="120" FadeOut="0">61</Step>
-   <Step Number="9" FadeIn="0" Hold="90" FadeOut="200">66</Step>
-   <Step Number="10" FadeIn="0" Hold="120" FadeOut="0">61</Step>
-   <Step Number="11" FadeIn="0" Hold="90" FadeOut="200">67</Step>
-   <Step Number="12" FadeIn="0" Hold="120" FadeOut="0">61</Step>
-   <Step Number="13" FadeIn="0" Hold="400" FadeOut="1500">68</Step>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep" />
+   <Step Number="0" FadeIn="0" Hold="350" FadeOut="200">114</Step>
+   <Step Number="1" FadeIn="0" Hold="350" FadeOut="200">115</Step>
+   <Step Number="2" FadeIn="0" Hold="350" FadeOut="200">116</Step>
+   <Step Number="3" FadeIn="0" Hold="350" FadeOut="200">115</Step>
+   <Step Number="4" FadeIn="0" Hold="350" FadeOut="200">114</Step>
+   <Step Number="5" FadeIn="0" Hold="350" FadeOut="200">113</Step>
+   <Step Number="6" FadeIn="0" Hold="280" FadeOut="200">114</Step>
+   <Step Number="7" FadeIn="0" Hold="280" FadeOut="200">115</Step>
+   <Step Number="8" FadeIn="0" Hold="280" FadeOut="200">116</Step>
+   <Step Number="9" FadeIn="0" Hold="280" FadeOut="200">115</Step>
+   <Step Number="10" FadeIn="0" Hold="280" FadeOut="200">114</Step>
+   <Step Number="11" FadeIn="0" Hold="280" FadeOut="200">113</Step>
+   <Step Number="12" FadeIn="0" Hold="220" FadeOut="200">114</Step>
+   <Step Number="13" FadeIn="0" Hold="220" FadeOut="200">115</Step>
+   <Step Number="14" FadeIn="0" Hold="220" FadeOut="200">116</Step>
+   <Step Number="15" FadeIn="0" Hold="220" FadeOut="200">115</Step>
+   <Step Number="16" FadeIn="0" Hold="220" FadeOut="200">114</Step>
+   <Step Number="17" FadeIn="0" Hold="220" FadeOut="200">113</Step>
+   <Step Number="18" FadeIn="0" Hold="200" FadeOut="0">114</Step>
+   <Step Number="19" FadeIn="0" Hold="200" FadeOut="0">115</Step>
+   <Step Number="20" FadeIn="0" Hold="1000" FadeOut="1500">116</Step>
   </Function>
-  <Function ID="70" Type="Scene" Name="COBs aus (Flash zum Farbblitz)" Path="Retro Wash/Aktionen">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
+  <Function ID="118" Type="Scene" Name="Glühbirne glimmt" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,25,3,25,4,25,5,25,6,25,7,25</FixtureVal>
+   <FixtureVal ID="1">2,25,3,25,4,25,5,25,6,25,7,25</FixtureVal>
+  </Function>
+  <Function ID="119" Type="Scene" Name="Glühbirne halb" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,120,3,120,4,120,5,120,6,120,7,120</FixtureVal>
+   <FixtureVal ID="1">2,120,3,120,4,120,5,120,6,120,7,120</FixtureVal>
+  </Function>
+  <Function ID="120" Type="Scene" Name="Glühbirne voll" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
+   <FixtureVal ID="1">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
+  </Function>
+  <Function ID="121" Type="Scene" Name="Glühbirne aus" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">1,0</FixtureVal>
+   <FixtureVal ID="1">1,0</FixtureVal>
+  </Function>
+  <Function ID="122" Type="Chaser" Name="Aktion: Glühbirne" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <Direction>Forward</Direction>
+   <RunOrder>SingleShot</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep" />
+   <Step Number="0" FadeIn="800" Hold="700" FadeOut="0">118</Step>
+   <Step Number="1" FadeIn="0" Hold="80" FadeOut="0">121</Step>
+   <Step Number="2" FadeIn="0" Hold="120" FadeOut="0">118</Step>
+   <Step Number="3" FadeIn="0" Hold="150" FadeOut="0">121</Step>
+   <Step Number="4" FadeIn="0" Hold="60" FadeOut="0">119</Step>
+   <Step Number="5" FadeIn="0" Hold="250" FadeOut="0">121</Step>
+   <Step Number="6" FadeIn="1200" Hold="4000" FadeOut="2500">120</Step>
+  </Function>
+  <Function ID="123" Type="Scene" Name="Funkeln 1" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255</FixtureVal>
+  </Function>
+  <Function ID="124" Type="Scene" Name="Funkeln 2" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">3,255</FixtureVal>
+  </Function>
+  <Function ID="125" Type="Scene" Name="Funkeln 3" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">4,255</FixtureVal>
+  </Function>
+  <Function ID="126" Type="Scene" Name="Funkeln 4" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">5,255</FixtureVal>
+  </Function>
+  <Function ID="127" Type="Scene" Name="Funkeln 5" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">6,255</FixtureVal>
+  </Function>
+  <Function ID="128" Type="Scene" Name="Funkeln 6" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">7,255</FixtureVal>
+  </Function>
+  <Function ID="129" Type="Scene" Name="Funkeln 7" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">2,255</FixtureVal>
+  </Function>
+  <Function ID="130" Type="Scene" Name="Funkeln 8" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">3,255</FixtureVal>
+  </Function>
+  <Function ID="131" Type="Scene" Name="Funkeln 9" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">4,255</FixtureVal>
+  </Function>
+  <Function ID="132" Type="Scene" Name="Funkeln 10" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">5,255</FixtureVal>
+  </Function>
+  <Function ID="133" Type="Scene" Name="Funkeln 11" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">6,255</FixtureVal>
+  </Function>
+  <Function ID="134" Type="Scene" Name="Funkeln 12" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">7,255</FixtureVal>
+  </Function>
+  <Function ID="135" Type="Chaser" Name="Aktion: Funkeln" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="400" Duration="140" />
+   <Direction>Forward</Direction>
+   <RunOrder>SingleShot</RunOrder>
+   <SpeedModes FadeIn="Common" FadeOut="Common" Duration="Common" />
+   <Step Number="0" FadeIn="0" Hold="0" FadeOut="0">133</Step>
+   <Step Number="1" FadeIn="0" Hold="0" FadeOut="0">130</Step>
+   <Step Number="2" FadeIn="0" Hold="0" FadeOut="0">124</Step>
+   <Step Number="3" FadeIn="0" Hold="0" FadeOut="0">123</Step>
+   <Step Number="4" FadeIn="0" Hold="0" FadeOut="0">130</Step>
+   <Step Number="5" FadeIn="0" Hold="0" FadeOut="0">125</Step>
+   <Step Number="6" FadeIn="0" Hold="0" FadeOut="0">129</Step>
+   <Step Number="7" FadeIn="0" Hold="0" FadeOut="0">128</Step>
+   <Step Number="8" FadeIn="0" Hold="0" FadeOut="0">126</Step>
+   <Step Number="9" FadeIn="0" Hold="0" FadeOut="0">133</Step>
+   <Step Number="10" FadeIn="0" Hold="0" FadeOut="0">132</Step>
+   <Step Number="11" FadeIn="0" Hold="0" FadeOut="0">127</Step>
+   <Step Number="12" FadeIn="0" Hold="0" FadeOut="0">130</Step>
+   <Step Number="13" FadeIn="0" Hold="0" FadeOut="0">131</Step>
+   <Step Number="14" FadeIn="0" Hold="0" FadeOut="0">128</Step>
+   <Step Number="15" FadeIn="0" Hold="0" FadeOut="0">133</Step>
+   <Step Number="16" FadeIn="0" Hold="0" FadeOut="0">130</Step>
+   <Step Number="17" FadeIn="0" Hold="0" FadeOut="0">124</Step>
+   <Step Number="18" FadeIn="0" Hold="0" FadeOut="0">133</Step>
+   <Step Number="19" FadeIn="0" Hold="0" FadeOut="0">134</Step>
+   <Step Number="20" FadeIn="0" Hold="0" FadeOut="0">129</Step>
+   <Step Number="21" FadeIn="0" Hold="0" FadeOut="0">123</Step>
+   <Step Number="22" FadeIn="0" Hold="0" FadeOut="0">130</Step>
+   <Step Number="23" FadeIn="0" Hold="0" FadeOut="0">131</Step>
+   <Step Number="24" FadeIn="0" Hold="0" FadeOut="0">128</Step>
+   <Step Number="25" FadeIn="0" Hold="0" FadeOut="0">127</Step>
+   <Step Number="26" FadeIn="0" Hold="0" FadeOut="0">124</Step>
+   <Step Number="27" FadeIn="0" Hold="0" FadeOut="0">126</Step>
+   <Step Number="28" FadeIn="0" Hold="0" FadeOut="0">130</Step>
+   <Step Number="29" FadeIn="0" Hold="0" FadeOut="0">126</Step>
+   <Step Number="30" FadeIn="0" Hold="0" FadeOut="0">123</Step>
+   <Step Number="31" FadeIn="0" Hold="0" FadeOut="0">124</Step>
+   <Step Number="32" FadeIn="0" Hold="0" FadeOut="0">133</Step>
+   <Step Number="33" FadeIn="0" Hold="0" FadeOut="0">126</Step>
+   <Step Number="34" FadeIn="0" Hold="0" FadeOut="0">133</Step>
+   <Step Number="35" FadeIn="0" Hold="0" FadeOut="0">129</Step>
+   <Step Number="36" FadeIn="0" Hold="0" FadeOut="0">125</Step>
+   <Step Number="37" FadeIn="0" Hold="0" FadeOut="0">126</Step>
+   <Step Number="38" FadeIn="0" Hold="0" FadeOut="0">123</Step>
+   <Step Number="39" FadeIn="0" Hold="0" FadeOut="0">134</Step>
+   <Step Number="40" FadeIn="0" Hold="0" FadeOut="0">125</Step>
+   <Step Number="41" FadeIn="0" Hold="0" FadeOut="0">128</Step>
+   <Step Number="42" FadeIn="0" Hold="0" FadeOut="0">126</Step>
+   <Step Number="43" FadeIn="0" Hold="0" FadeOut="0">123</Step>
+   <Step Number="44" FadeIn="0" Hold="0" FadeOut="0">131</Step>
+   <Step Number="45" FadeIn="0" Hold="0" FadeOut="0">129</Step>
+   <Step Number="46" FadeIn="0" Hold="0" FadeOut="0">132</Step>
+   <Step Number="47" FadeIn="0" Hold="0" FadeOut="0">130</Step>
+   <Step Number="48" FadeIn="0" Hold="0" FadeOut="0">132</Step>
+   <Step Number="49" FadeIn="0" Hold="0" FadeOut="0">128</Step>
+   <Step Number="50" FadeIn="0" Hold="0" FadeOut="0">134</Step>
+   <Step Number="51" FadeIn="0" Hold="0" FadeOut="0">127</Step>
+   <Step Number="52" FadeIn="0" Hold="0" FadeOut="0">134</Step>
+   <Step Number="53" FadeIn="0" Hold="0" FadeOut="0">124</Step>
+   <Step Number="54" FadeIn="0" Hold="0" FadeOut="0">134</Step>
+  </Function>
+  <Function ID="136" Type="Scene" Name="Countdown 12" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
+   <FixtureVal ID="1">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
+  </Function>
+  <Function ID="137" Type="Scene" Name="Countdown 11" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
+   <FixtureVal ID="1">2,255,3,255,4,255,5,255,6,255</FixtureVal>
+  </Function>
+  <Function ID="138" Type="Scene" Name="Countdown 10" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
+   <FixtureVal ID="1">2,255,3,255,4,255,5,255</FixtureVal>
+  </Function>
+  <Function ID="139" Type="Scene" Name="Countdown 9" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
+   <FixtureVal ID="1">2,255,3,255,4,255</FixtureVal>
+  </Function>
+  <Function ID="140" Type="Scene" Name="Countdown 8" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
+   <FixtureVal ID="1">2,255,3,255</FixtureVal>
+  </Function>
+  <Function ID="141" Type="Scene" Name="Countdown 7" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
+   <FixtureVal ID="1">2,255</FixtureVal>
+  </Function>
+  <Function ID="142" Type="Scene" Name="Countdown 6" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255,7,255</FixtureVal>
+  </Function>
+  <Function ID="143" Type="Scene" Name="Countdown 5" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255</FixtureVal>
+  </Function>
+  <Function ID="144" Type="Scene" Name="Countdown 4" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255,5,255</FixtureVal>
+  </Function>
+  <Function ID="145" Type="Scene" Name="Countdown 3" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255</FixtureVal>
+  </Function>
+  <Function ID="146" Type="Scene" Name="Countdown 2" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255</FixtureVal>
+  </Function>
+  <Function ID="147" Type="Scene" Name="Countdown 1" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255</FixtureVal>
+  </Function>
+  <Function ID="148" Type="Scene" Name="Countdown Pause" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">1,0</FixtureVal>
+   <FixtureVal ID="1">1,0</FixtureVal>
+  </Function>
+  <Function ID="149" Type="Scene" Name="Countdown Blitz" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">2,255,3,255,4,255,5,255,6,255,7,255,8,255,9,255,10,255,15,255,16,255,17,255,18,255,19,255,20,255,21,255,22,255,23,255,24,255,25,255,26,255,27,255,28,255,29,255,30,255,31,255,32,255</FixtureVal>
+   <FixtureVal ID="1">2,255,3,255,4,255,5,255,6,255,7,255,8,255,9,255,10,255,15,255,16,255,17,255,18,255,19,255,20,255,21,255,22,255,23,255,24,255,25,255,26,255,27,255,28,255,29,255,30,255,31,255,32,255</FixtureVal>
+  </Function>
+  <Function ID="150" Type="Chaser" Name="Aktion: Countdown" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <Direction>Forward</Direction>
+   <RunOrder>SingleShot</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep" />
+   <Step Number="0" FadeIn="0" Hold="583" FadeOut="300">136</Step>
+   <Step Number="1" FadeIn="0" Hold="583" FadeOut="300">137</Step>
+   <Step Number="2" FadeIn="0" Hold="583" FadeOut="300">138</Step>
+   <Step Number="3" FadeIn="0" Hold="583" FadeOut="300">139</Step>
+   <Step Number="4" FadeIn="0" Hold="583" FadeOut="300">140</Step>
+   <Step Number="5" FadeIn="0" Hold="583" FadeOut="300">141</Step>
+   <Step Number="6" FadeIn="0" Hold="583" FadeOut="300">142</Step>
+   <Step Number="7" FadeIn="0" Hold="583" FadeOut="300">143</Step>
+   <Step Number="8" FadeIn="0" Hold="583" FadeOut="300">144</Step>
+   <Step Number="9" FadeIn="0" Hold="583" FadeOut="300">145</Step>
+   <Step Number="10" FadeIn="0" Hold="583" FadeOut="300">146</Step>
+   <Step Number="11" FadeIn="0" Hold="583" FadeOut="300">147</Step>
+   <Step Number="12" FadeIn="0" Hold="583" FadeOut="0">148</Step>
+   <Step Number="13" FadeIn="0" Hold="300" FadeOut="1500">149</Step>
+  </Function>
+  <Function ID="151" Type="Scene" Name="Gewitter Pause" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">1,0</FixtureVal>
+   <FixtureVal ID="1">1,0</FixtureVal>
+  </Function>
+  <Function ID="152" Type="Scene" Name="Gewitter fern oben" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">15,150,16,170,17,255,18,150,19,170,20,255,21,150,22,170,23,255</FixtureVal>
+  </Function>
+  <Function ID="153" Type="Scene" Name="Gewitter fern" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">8,150,9,170,10,255,15,150,16,170,17,255,18,150,19,170,20,255,21,150,22,170,23,255,24,150,25,170,26,255,27,150,28,170,29,255,30,150,31,170,32,255</FixtureVal>
+  </Function>
+  <Function ID="154" Type="Scene" Name="Gewitter oben" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">15,255,16,255,17,255,18,255,19,255,20,255,21,255,22,255,23,255</FixtureVal>
+   <FixtureVal ID="1">15,255,16,255,17,255,18,255,19,255,20,255,21,255,22,255,23,255</FixtureVal>
+  </Function>
+  <Function ID="155" Type="Scene" Name="Gewitter unten" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">24,255,25,255,26,255,27,255,28,255,29,255,30,255,31,255,32,255</FixtureVal>
+   <FixtureVal ID="1">24,255,25,255,26,255,27,255,28,255,29,255,30,255,31,255,32,255</FixtureVal>
+  </Function>
+  <Function ID="156" Type="Scene" Name="Gewitter alle" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,255,9,255,10,255,15,255,16,255,17,255,18,255,19,255,20,255,21,255,22,255,23,255,24,255,25,255,26,255,27,255,28,255,29,255,30,255,31,255,32,255</FixtureVal>
+   <FixtureVal ID="1">8,255,9,255,10,255,15,255,16,255,17,255,18,255,19,255,20,255,21,255,22,255,23,255,24,255,25,255,26,255,27,255,28,255,29,255,30,255,31,255,32,255</FixtureVal>
+  </Function>
+  <Function ID="157" Type="Scene" Name="Gewitter Gerät 1" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,255,9,255,10,255,15,255,16,255,17,255,18,255,19,255,20,255,21,255,22,255,23,255,24,255,25,255,26,255,27,255,28,255,29,255,30,255,31,255,32,255</FixtureVal>
+  </Function>
+  <Function ID="158" Type="Scene" Name="Gewitter Gerät 2" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="1">8,255,9,255,10,255,15,255,16,255,17,255,18,255,19,255,20,255,21,255,22,255,23,255,24,255,25,255,26,255,27,255,28,255,29,255,30,255,31,255,32,255</FixtureVal>
+  </Function>
+  <Function ID="159" Type="Scene" Name="Gewitter fern unten" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">24,150,25,170,26,255,27,150,28,170,29,255,30,150,31,170,32,255</FixtureVal>
+  </Function>
+  <Function ID="160" Type="Chaser" Name="Aktion: Gewitter" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <Direction>Forward</Direction>
+   <RunOrder>SingleShot</RunOrder>
+   <SpeedModes FadeIn="PerStep" FadeOut="PerStep" Duration="PerStep" />
+   <Step Number="0" FadeIn="0" Hold="60" FadeOut="0">151</Step>
+   <Step Number="1" FadeIn="0" Hold="50" FadeOut="0">152</Step>
+   <Step Number="2" FadeIn="0" Hold="80" FadeOut="0">151</Step>
+   <Step Number="3" FadeIn="0" Hold="40" FadeOut="400">153</Step>
+   <Step Number="4" FadeIn="0" Hold="900" FadeOut="0">151</Step>
+   <Step Number="5" FadeIn="0" Hold="40" FadeOut="0">154</Step>
+   <Step Number="6" FadeIn="0" Hold="60" FadeOut="0">151</Step>
+   <Step Number="7" FadeIn="0" Hold="30" FadeOut="0">155</Step>
+   <Step Number="8" FadeIn="0" Hold="100" FadeOut="0">151</Step>
+   <Step Number="9" FadeIn="0" Hold="70" FadeOut="700">156</Step>
+   <Step Number="10" FadeIn="0" Hold="1100" FadeOut="0">151</Step>
+   <Step Number="11" FadeIn="0" Hold="50" FadeOut="0">157</Step>
+   <Step Number="12" FadeIn="0" Hold="40" FadeOut="0">151</Step>
+   <Step Number="13" FadeIn="0" Hold="50" FadeOut="0">158</Step>
+   <Step Number="14" FadeIn="0" Hold="60" FadeOut="0">151</Step>
+   <Step Number="15" FadeIn="0" Hold="80" FadeOut="900">156</Step>
+   <Step Number="16" FadeIn="0" Hold="800" FadeOut="0">151</Step>
+   <Step Number="17" FadeIn="0" Hold="60" FadeOut="1500">159</Step>
+  </Function>
+  <Function ID="161" Type="Scene" Name="COBs aus (Flash zum Gewitter)" Path="Retro Wash/Aktionen">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
    <FixtureVal ID="0">2,0,3,0,4,0,5,0,6,0,7,0</FixtureVal>
    <FixtureVal ID="1">2,0,3,0,4,0,5,0,6,0,7,0</FixtureVal>
   </Function>
-  <Function ID="71" Type="Scene" Name="Hintergrund dunkel (Mask, Flash zum Farbblitz)" Path="Retro Wash/Aktionen" BlendMode="Mask">
-   <Speed FadeIn="0" FadeOut="0" Duration="0"/>
-   <FixtureVal ID="0">8,25,9,25,10,25,15,25,16,25,17,25,18,25,19,25,20,25,21,25,22,25,23,25,24,25,25,25,26,25,27,25,28,25,29,25,30,25,31,25,32,25</FixtureVal>
-   <FixtureVal ID="1">8,25,9,25,10,25,15,25,16,25,17,25,18,25,19,25,20,25,21,25,22,25,23,25,24,25,25,25,26,25,27,25,28,25,29,25,30,25,31,25,32,25</FixtureVal>
+  <Function ID="162" Type="Scene" Name="Himmel dunkel (Mask, Flash zum Gewitter)" Path="Retro Wash/Aktionen" BlendMode="Mask">
+   <Speed FadeIn="0" FadeOut="0" Duration="0" />
+   <FixtureVal ID="0">8,20,9,25,10,70,15,20,16,25,17,70,18,20,19,25,20,70,21,20,22,25,23,70,24,20,25,25,26,70,27,20,28,25,29,70,30,20,31,25,32,70</FixtureVal>
+   <FixtureVal ID="1">8,20,9,25,10,70,15,20,16,25,17,70,18,20,19,25,20,70,21,20,22,25,23,70,24,20,25,25,26,70,27,20,28,25,29,70,30,20,31,25,32,70</FixtureVal>
   </Function>
   <Monitor DisplayMode="0" ShowLabels="0">
    <Font>Arial,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0</Font>
    <ChannelStyle>0</ChannelStyle>
    <ValueStyle>0</ValueStyle>
-   <Grid Width="5" Height="3" Depth="5" Units="0" POV="1"/>
+   <Grid Width="5" Height="3" Depth="5" Units="0" POV="1" />
    <StageItem>0</StageItem>
-   <FxItem ID="0" XPos="1650.05" YPos="1000" ZPos="1192"/>
+   <FxItem ID="0" XPos="1650.05" YPos="1000" ZPos="1192" />
   </Monitor>
  </Engine>
  <VirtualConsole>
@@ -524,65 +1192,209 @@
    <Appearance>
     <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0</Font>
    </Appearance>
-   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080" />
    <AllowResize>False</AllowResize>
    <ShowHeader>False</ShowHeader>
    <ShowEnableButton>True</ShowEnableButton>
    <Collapsed>False</Collapsed>
    <Disabled>False</Disabled>
-   <Frame Caption="Retro Wash" ID="25">
-    <WindowState Visible="True" X="0" Y="0" Width="880" Height="890"/>
+   <Frame Caption="Retro Wash" ID="35">
+    <WindowState Visible="True" X="0" Y="0" Width="1300" Height="990" />
     <AllowResize>True</AllowResize>
     <ShowHeader>True</ShowHeader>
     <ShowEnableButton>False</ShowEnableButton>
     <Collapsed>False</Collapsed>
     <Disabled>False</Disabled>
-    <Button Caption="Hintergrund dunkel (Flash zum Farbblitz)" ID="8">
-     <WindowState Visible="True" X="590" Y="40" Width="130" Height="90"/>
-     <Appearance>
-      <BackgroundColor>4280295456</BackgroundColor>
-     </Appearance>
-     <Function ID="71"/>
-     <Action Override="0" ForceLTP="0">Flash</Action>
-     <Input ID="0" Universe="1" Channel="15515"/>
-    </Button>
-    <Button Caption="COBs aus (Flash zum Farbblitz)" ID="7">
-     <WindowState Visible="True" X="450" Y="40" Width="130" Height="90"/>
-     <Appearance>
-      <BackgroundColor>4281348144</BackgroundColor>
-     </Appearance>
-     <Function ID="70"/>
-     <Action Override="1" ForceLTP="1">Flash</Action>
-     <Input ID="0" Universe="1" Channel="15515"/>
+    <Button Caption="Basis (Dimmer auf)" ID="4">
+     <WindowState Visible="True" X="10" Y="40" Width="130" Height="90" />
+     <Function ID="0" />
+     <Action>Toggle</Action>
     </Button>
     <Button Caption="Stop All" ID="5">
-     <WindowState Visible="True" X="150" Y="40" Width="130" Height="90"/>
+     <WindowState Visible="True" X="150" Y="40" Width="130" Height="90" />
      <Appearance>
       <BackgroundColor>4287299584</BackgroundColor>
      </Appearance>
-     <Function ID="4294967295"/>
+     <Function ID="4294967295" />
      <Action>StopAll</Action>
     </Button>
-    <Button Caption="Basis (Dimmer auf)" ID="4">
-     <WindowState Visible="True" X="10" Y="40" Width="130" Height="90"/>
-     <Function ID="0"/>
+    <Button Caption="Aktion: Gewitter (Taste G halten)" ID="6">
+     <WindowState Visible="True" X="310" Y="40" Width="130" Height="90" />
+     <Appearance>
+      <BackgroundColor>4279903102</BackgroundColor>
+     </Appearance>
+     <Function ID="160" />
      <Action>Toggle</Action>
+     <Input ID="0" Universe="1" Channel="15515" />
+     <Key>G</Key>
     </Button>
-    <Frame Caption="COB – Lauflicht &amp; Aktionen" ID="23">
-     <WindowState Visible="True" X="10" Y="150" Width="450" Height="720"/>
+    <Button Caption="COBs aus (Flash zum Gewitter)" ID="7">
+     <WindowState Visible="True" X="450" Y="40" Width="130" Height="90" />
+     <Appearance>
+      <BackgroundColor>4281348144</BackgroundColor>
+     </Appearance>
+     <Function ID="161" />
+     <Action Override="1" ForceLTP="1">Flash</Action>
+     <Input ID="0" Universe="1" Channel="15515" />
+     <Key>G</Key>
+    </Button>
+    <Button Caption="Himmel dunkel (Flash zum Gewitter)" ID="8">
+     <WindowState Visible="True" X="590" Y="40" Width="130" Height="90" />
+     <Appearance>
+      <BackgroundColor>4279244848</BackgroundColor>
+     </Appearance>
+     <Function ID="162" />
+     <Action>Flash</Action>
+     <Input ID="0" Universe="1" Channel="15515" />
+     <Key>G</Key>
+    </Button>
+    <Frame Caption="COB – Lauflicht &amp; Aktionen" ID="33">
+     <WindowState Visible="True" X="10" Y="150" Width="870" Height="820" />
      <AllowResize>True</AllowResize>
      <ShowHeader>True</ShowHeader>
      <ShowEnableButton>False</ShowEnableButton>
      <Collapsed>False</Collapsed>
      <Disabled>False</Disabled>
-     <SpeedDial Caption="Tempo Lauflicht" ID="16">
-      <WindowState Visible="True" X="10" Y="310" Width="230" Height="390"/>
+     <SoloFrame Caption="Lauflicht" ID="23">
+      <WindowState Visible="True" X="10" Y="40" Width="860" Height="140" />
+      <AllowResize>True</AllowResize>
+      <ShowHeader>True</ShowHeader>
+      <ShowEnableButton>False</ShowEnableButton>
+      <Collapsed>False</Collapsed>
+      <Disabled>False</Disabled>
+      <Button Caption="Lauflicht synchron" ID="17">
+       <WindowState Visible="True" X="10" Y="40" Width="130" Height="90" />
+       <Appearance>
+        <BackgroundColor>4289948416</BackgroundColor>
+       </Appearance>
+       <Function ID="7" />
+       <Action>Toggle</Action>
+      </Button>
+      <Button Caption="Lauflicht gegenläufig" ID="18">
+       <WindowState Visible="True" X="150" Y="40" Width="130" Height="90" />
+       <Appearance>
+        <BackgroundColor>4289948416</BackgroundColor>
+       </Appearance>
+       <Function ID="14" />
+       <Action>Toggle</Action>
+      </Button>
+      <Button Caption="Lauflicht fortlaufend" ID="19">
+       <WindowState Visible="True" X="290" Y="40" Width="130" Height="90" />
+       <Appearance>
+        <BackgroundColor>4289948416</BackgroundColor>
+       </Appearance>
+       <Function ID="27" />
+       <Action>Toggle</Action>
+      </Button>
+      <Button Caption="Lauflicht Schlange" ID="20">
+       <WindowState Visible="True" X="430" Y="40" Width="130" Height="90" />
+       <Appearance>
+        <BackgroundColor>4289948416</BackgroundColor>
+       </Appearance>
+       <Function ID="40" />
+       <Action>Toggle</Action>
+      </Button>
+      <Button Caption="Lauflicht oben+unten" ID="21">
+       <WindowState Visible="True" X="570" Y="40" Width="130" Height="90" />
+       <Appearance>
+        <BackgroundColor>4289948416</BackgroundColor>
+       </Appearance>
+       <Function ID="45" />
+       <Action>Toggle</Action>
+      </Button>
+      <Button Caption="Lauflicht farbig" ID="22">
+       <WindowState Visible="True" X="710" Y="40" Width="130" Height="90" />
+       <Appearance>
+        <BackgroundColor>4289948416</BackgroundColor>
+       </Appearance>
+       <Function ID="58" />
+       <Action>Toggle</Action>
+      </Button>
+     </SoloFrame>
+     <Button Caption="Aktion: Alle COBs 5 s" ID="9">
+      <WindowState Visible="True" X="10" Y="200" Width="130" Height="90" />
+      <Appearance>
+       <BackgroundColor>4278220163</BackgroundColor>
+      </Appearance>
+      <Function ID="82" />
+      <Action>Toggle</Action>
+      <Input ID="0" Universe="1" Channel="27446" />
+     </Button>
+     <Button Caption="Aktion: Herzschlag" ID="10">
+      <WindowState Visible="True" X="150" Y="200" Width="130" Height="90" />
+      <Appearance>
+       <BackgroundColor>4287306266</BackgroundColor>
+      </Appearance>
+      <Function ID="86" />
+      <Action>Toggle</Action>
+      <Input ID="0" Universe="1" Channel="22957" />
+     </Button>
+     <Button Caption="Aktion: Welle" ID="11">
+      <WindowState Visible="True" X="290" Y="200" Width="130" Height="90" />
+      <Appearance>
+       <BackgroundColor>4284111450</BackgroundColor>
+      </Appearance>
+      <Function ID="99" />
+      <Action>Toggle</Action>
+      <Input ID="0" Universe="1" Channel="18468" />
+     </Button>
+     <Button Caption="Aktion: Schlange" ID="12">
+      <WindowState Visible="True" X="430" Y="200" Width="130" Height="90" />
+      <Appearance>
+       <BackgroundColor>4281236786</BackgroundColor>
+      </Appearance>
+      <Function ID="112" />
+      <Action>Toggle</Action>
+      <Input ID="0" Universe="1" Channel="11538" />
+     </Button>
+     <Button Caption="Aktion: oben+unten" ID="13">
+      <WindowState Visible="True" X="570" Y="200" Width="130" Height="90" />
+      <Appearance>
+       <BackgroundColor>4279592384</BackgroundColor>
+      </Appearance>
+      <Function ID="117" />
+      <Action>Toggle</Action>
+      <Input ID="0" Universe="1" Channel="8073" />
+     </Button>
+     <Button Caption="Aktion: Glühbirne" ID="14">
+      <WindowState Visible="True" X="710" Y="200" Width="130" Height="90" />
+      <Appearance>
+       <BackgroundColor>4287458816</BackgroundColor>
+      </Appearance>
+      <Function ID="122" />
+      <Action>Toggle</Action>
+      <Input ID="0" Universe="1" Channel="3584" />
+     </Button>
+     <Button Caption="Aktion: Funkeln" ID="15">
+      <WindowState Visible="True" X="10" Y="300" Width="130" Height="90" />
+      <Appearance>
+       <BackgroundColor>4282735204</BackgroundColor>
+      </Appearance>
+      <Function ID="135" />
+      <Action>Toggle</Action>
+      <Input ID="0" Universe="1" Channel="63223" />
+     </Button>
+     <Button Caption="Aktion: Countdown" ID="16">
+      <WindowState Visible="True" X="150" Y="300" Width="130" Height="90" />
+      <Appearance>
+       <BackgroundColor>4290721292</BackgroundColor>
+      </Appearance>
+      <Function ID="150" />
+      <Action>Toggle</Action>
+      <Input ID="0" Universe="1" Channel="59262" />
+     </Button>
+     <SpeedDial Caption="Tempo Lauflicht + Ringlauf" ID="24">
+      <WindowState Visible="True" X="10" Y="410" Width="230" Height="390" />
       <Visibility>231</Visibility>
       <Time>1200</Time>
-      <AbsoluteValue Minimum="0" Maximum="10000"/>
+      <AbsoluteValue Minimum="0" Maximum="10000" />
       <Function FadeIn="6" FadeOut="7" Duration="6">7</Function>
       <Function FadeIn="6" FadeOut="7" Duration="6">14</Function>
       <Function FadeIn="6" FadeOut="7" Duration="6">27</Function>
+      <Function FadeIn="4" FadeOut="5" Duration="4">40</Function>
+      <Function FadeIn="1" FadeOut="5" Duration="6">45</Function>
+      <Function FadeIn="6" FadeOut="7" Duration="6">58</Function>
+      <Function FadeIn="6" FadeOut="7" Duration="6">80</Function>
       <Preset ID="1">
        <Name>Standard</Name>
        <Value>1200</Value>
@@ -596,109 +1408,66 @@
        <Value>600</Value>
       </Preset>
      </SpeedDial>
-     <Button Caption="Aktion: Welle" ID="15">
-      <WindowState Visible="True" X="290" Y="200" Width="130" Height="90"/>
-      <Appearance>
-       <BackgroundColor>4284111450</BackgroundColor>
-      </Appearance>
-      <Function ID="60"/>
-      <Action>Toggle</Action>
-      <Input ID="0" Universe="1" Channel="18468"/>
-     </Button>
-     <Button Caption="Aktion: Herzschlag" ID="14">
-      <WindowState Visible="True" X="150" Y="200" Width="130" Height="90"/>
-      <Appearance>
-       <BackgroundColor>4287306266</BackgroundColor>
-      </Appearance>
-      <Function ID="47"/>
-      <Action>Toggle</Action>
-      <Input ID="0" Universe="1" Channel="22957"/>
-     </Button>
-     <Slider Caption="Helligkeit COB" ID="17" WidgetStyle="Slider" InvertedAppearance="false">
-      <WindowState Visible="True" X="260" Y="310" Width="110" Height="390"/>
+     <Slider Caption="Helligkeit COB" ID="25" WidgetStyle="Slider" InvertedAppearance="false">
+      <WindowState Visible="True" X="260" Y="410" Width="110" Height="390" />
       <SliderMode ValueDisplayStyle="Exact">Submaster</SliderMode>
-      <Level LowLimit="0" HighLimit="255" Value="82"/>
+      <Level LowLimit="0" HighLimit="255" Value="255" />
      </Slider>
-     <Button Caption="Aktion: Alle COBs 5 s" ID="13">
-      <WindowState Visible="True" X="10" Y="200" Width="130" Height="90"/>
+     <Button Caption="Glimmen (Grundlicht)" ID="26">
+      <WindowState Visible="True" X="390" Y="410" Width="130" Height="90" />
       <Appearance>
-       <BackgroundColor>4278220163</BackgroundColor>
+       <BackgroundColor>4285353025</BackgroundColor>
       </Appearance>
-      <Function ID="43"/>
+      <Function ID="59" />
       <Action>Toggle</Action>
-      <Input ID="0" Universe="1" Channel="27446"/>
      </Button>
-     <SoloFrame Caption="Lauflicht" ID="12">
-      <WindowState Visible="True" X="10" Y="40" Width="440" Height="140"/>
-      <AllowResize>True</AllowResize>
-      <ShowHeader>True</ShowHeader>
-      <ShowEnableButton>False</ShowEnableButton>
-      <Collapsed>False</Collapsed>
-      <Disabled>False</Disabled>
-      <Button Caption="Lauflicht gegenläufig" ID="10">
-       <WindowState Visible="True" X="150" Y="40" Width="130" Height="90"/>
-       <Appearance>
-        <BackgroundColor>4289948416</BackgroundColor>
-       </Appearance>
-       <Function ID="14"/>
-       <Action>Toggle</Action>
-      </Button>
-      <Button Caption="Lauflicht fortlaufend" ID="11">
-       <WindowState Visible="True" X="290" Y="40" Width="130" Height="90"/>
-       <Appearance>
-        <BackgroundColor>4289948416</BackgroundColor>
-       </Appearance>
-       <Function ID="27"/>
-       <Action>Toggle</Action>
-      </Button>
-      <Button Caption="Lauflicht synchron" ID="9">
-       <WindowState Visible="True" X="10" Y="40" Width="130" Height="90"/>
-       <Appearance>
-        <BackgroundColor>4289948416</BackgroundColor>
-       </Appearance>
-       <Function ID="7"/>
-       <Action>Toggle</Action>
-      </Button>
-     </SoloFrame>
     </Frame>
-    <Frame Caption="Farben – Hintergrund" ID="24">
-     <WindowState Visible="True" X="470" Y="150" Width="390" Height="720"/>
+    <Frame Caption="Farben – Hintergrund" ID="34">
+     <WindowState Visible="True" X="890" Y="150" Width="390" Height="820" />
      <AllowResize>True</AllowResize>
      <ShowHeader>True</ShowHeader>
      <ShowEnableButton>False</ShowEnableButton>
      <Collapsed>False</Collapsed>
      <Disabled>False</Disabled>
-     <SoloFrame Caption="Farbwechsel" ID="20">
-      <WindowState Visible="True" X="10" Y="40" Width="300" Height="140"/>
+     <SoloFrame Caption="Farbwechsel" ID="29">
+      <WindowState Visible="True" X="10" Y="40" Width="300" Height="140" />
       <AllowResize>True</AllowResize>
       <ShowHeader>True</ShowHeader>
       <ShowEnableButton>False</ShowEnableButton>
       <Collapsed>False</Collapsed>
       <Disabled>False</Disabled>
-      <Button Caption="Farbwechsel synchron" ID="18">
-       <WindowState Visible="True" X="10" Y="40" Width="130" Height="90"/>
+      <Button Caption="Farbwechsel synchron" ID="27">
+       <WindowState Visible="True" X="10" Y="40" Width="130" Height="90" />
        <Appearance>
         <BackgroundColor>4283045004</BackgroundColor>
        </Appearance>
-       <Function ID="34"/>
+       <Function ID="66" />
        <Action>Toggle</Action>
       </Button>
-      <Button Caption="Farbwechsel versetzt" ID="19">
-       <WindowState Visible="True" X="150" Y="40" Width="130" Height="90"/>
+      <Button Caption="Farbwechsel versetzt" ID="28">
+       <WindowState Visible="True" X="150" Y="40" Width="130" Height="90" />
        <Appearance>
         <BackgroundColor>4283045004</BackgroundColor>
        </Appearance>
-       <Function ID="41"/>
+       <Function ID="73" />
        <Action>Toggle</Action>
       </Button>
      </SoloFrame>
-     <SpeedDial Caption="Tempo Farben" ID="21">
-      <WindowState Visible="True" X="10" Y="310" Width="230" Height="390"/>
+     <Button Caption="Ringlauf gegen Lauflicht" ID="30">
+      <WindowState Visible="True" X="10" Y="200" Width="130" Height="90" />
+      <Appearance>
+       <BackgroundColor>4278223759</BackgroundColor>
+      </Appearance>
+      <Function ID="80" />
+      <Action>Toggle</Action>
+     </Button>
+     <SpeedDial Caption="Tempo Farben" ID="31">
+      <WindowState Visible="True" X="10" Y="410" Width="230" Height="390" />
       <Visibility>231</Visibility>
       <Time>16000</Time>
-      <AbsoluteValue Minimum="0" Maximum="60000"/>
-      <Function FadeIn="5" FadeOut="5" Duration="6">34</Function>
-      <Function FadeIn="5" FadeOut="5" Duration="6">41</Function>
+      <AbsoluteValue Minimum="0" Maximum="60000" />
+      <Function FadeIn="5" FadeOut="5" Duration="6">66</Function>
+      <Function FadeIn="5" FadeOut="5" Duration="6">73</Function>
       <Preset ID="1">
        <Name>Standard</Name>
        <Value>16000</Value>
@@ -712,28 +1481,19 @@
        <Value>8000</Value>
       </Preset>
      </SpeedDial>
-     <Slider Caption="Helligkeit Farben" ID="22" WidgetStyle="Slider" InvertedAppearance="false">
-      <WindowState Visible="True" X="260" Y="310" Width="110" Height="390"/>
+     <Slider Caption="Helligkeit Farben" ID="32" WidgetStyle="Slider" InvertedAppearance="false">
+      <WindowState Visible="True" X="260" Y="410" Width="110" Height="390" />
       <SliderMode ValueDisplayStyle="Exact">Submaster</SliderMode>
-      <Level LowLimit="0" HighLimit="255" Value="141"/>
+      <Level LowLimit="0" HighLimit="255" Value="255" />
      </Slider>
     </Frame>
-    <Button Caption="Aktion: Farbblitz" ID="6">
-     <WindowState Visible="True" X="310" Y="40" Width="130" Height="90"/>
-     <Appearance>
-      <BackgroundColor>4285143962</BackgroundColor>
-     </Appearance>
-     <Function ID="69"/>
-     <Action>Toggle</Action>
-     <Input ID="0" Universe="1" Channel="15515"/>
-    </Button>
    </Frame>
   </Frame>
   <Frame Caption="Seite 2" ID="1">
    <Appearance>
     <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0</Font>
    </Appearance>
-   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080" />
    <AllowResize>False</AllowResize>
    <ShowHeader>False</ShowHeader>
    <ShowEnableButton>True</ShowEnableButton>
@@ -744,7 +1504,7 @@
    <Appearance>
     <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0</Font>
    </Appearance>
-   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080" />
    <AllowResize>False</AllowResize>
    <ShowHeader>False</ShowHeader>
    <ShowEnableButton>True</ShowEnableButton>
@@ -755,7 +1515,7 @@
    <Appearance>
     <Font>Roboto Condensed,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0</Font>
    </Appearance>
-   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080"/>
+   <WindowState Visible="True" X="0" Y="0" Width="1920" Height="1080" />
    <AllowResize>False</AllowResize>
    <ShowHeader>False</ShowHeader>
    <ShowEnableButton>True</ShowEnableButton>

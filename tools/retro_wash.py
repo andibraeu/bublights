@@ -5,11 +5,15 @@
 Das Skript sucht alle Retro Washes im Workspace, ordnet sie nach Universum/Adresse
 (= Reihenfolge der Kette) und erzeugt:
 
-  * Lauflicht synchron / gegenläufig / fortlaufend über alle Geräte (Solo-Frame)
+  * Lauflicht synchron / gegenläufig / fortlaufend / Schlange über alle Geräte und
+    „von oben und unten“ (Solo-Frame)
   * Hintergrund-Farbwechsel synchron / versetzt
-  * Aktionen: Alle COBs, Herzschlag, Welle (über alle Geräte), Farbblitz (abwechselnd)
+  * Lauflicht farbig (Ring um die leuchtende COB, je Gerät eine Farbe), Glimmen als Grundlicht,
+    Ringlauf gegen die Lauflicht-Richtung
+  * Aktionen: Alle COBs, Herzschlag, Welle (über alle Geräte), Gewitter,
+    Schlange, oben+unten, Glühbirne, Funkeln, Countdown (je höchstens ~10 s)
   * Submaster für COB- und Farb-Helligkeit, Speed-Dials mit Presets
-  * optional OSC-Bindungen für die Aktionen (/retro/aktion/1..4, z. B. vom Grobhandtaster)
+  * optional OSC-Bindungen für die Aktionen (/retro/aktion/1..9, z. B. vom Grobhandtaster)
 
 Alles Erzeugte liegt im Funktions-Ordner NAME und im VC-Rahmen NAME auf der gewählten
 Seite. Ein erneuter Lauf ersetzt genau diese Teile; Eingänge (MIDI, OSC, Tasten), die in
@@ -24,6 +28,7 @@ Beispiele:
 
 import argparse
 import copy
+import random
 import sys
 import xml.etree.ElementTree as ET
 
@@ -47,6 +52,12 @@ INVALID_ID = 4294967295
 # Hintergrundfarben (gedimmt, damit die COBs vorne bleiben)
 COLOURS = [("Rubin", 200, 0, 20), ("Bernstein", 200, 70, 0), ("Magenta", 180, 0, 120),
            ("Violett", 90, 0, 200), ("Tiefblau", 0, 20, 200), ("Petrol", 0, 120, 140)]
+
+# Ringfarben je Gerät beim farbigen Lauflicht
+DEVICE_COLOURS = [(0, 255, 255), (255, 0, 255), (255, 120, 0), (120, 255, 0)]
+
+# Aktionen sollen innerhalb der Tastersperre (11 s) fertig sein
+ACTION_MS = 10000
 
 
 def q(tag):
@@ -224,6 +235,11 @@ def rings(fxs, r, g, b, pixels=range(6)):
     return out
 
 
+def step_ms(steps, ms, budget=ACTION_MS):
+    """Schrittzeit ms, bei vielen Schritten (viele Geräte) so verkürzt, dass alles ins Budget passt."""
+    return min(ms, budget // len(steps))
+
+
 def build_functions(F, fxs):
     n = len(fxs)
     ids = {}
@@ -234,6 +250,8 @@ def build_functions(F, fxs):
     # Lauflicht: Crossfade-Chaser, nächster Schritt startet nach dem Einblenden, der vorige
     # blendet doppelt so lang aus (Schweif). Jede Variante hat eigene Szenen.
     run = (1200, 2400, 1200)
+    # Faktoren für den Speed-Dial (5 = 1/2, 6 = 1x, 7 = 2x), Chaser-Zeiten passend zu Tempo 1200
+    run_factors = (6, 7, 6)
     variants = [("synchron", lambda k: {fx: k for fx in fxs})]
     if n > 1:
         variants.append(("gegenläufig", lambda k: {fx: (k if i % 2 == 0 else 5 - k) for i, fx in enumerate(fxs)}))
@@ -241,11 +259,35 @@ def build_functions(F, fxs):
     for label, pos in variants:
         steps = [F.scene(f"Lauflicht {label} {k + 1}", {fx: {COB[c]: 255} for fx, c in pos(k).items()}, "Lauflicht")
                  for k in range(6)]
-        ids["lauf"].append((label, F.chaser(f"COB Lauflicht {label}", steps, "Lauflicht", "PingPong", run)))
+        ids["lauf"].append((label, F.chaser(f"COB Lauflicht {label}", steps, "Lauflicht", "PingPong", run), run_factors))
     if n > 1:
         steps = [F.scene(f"Lauflicht fortlaufend {j + 1}", {fxs[j // 6]: {COB[j % 6]: 255}}, "Lauflicht")
                  for j in range(6 * n)]
-        ids["lauf"].append(("fortlaufend", F.chaser("COB Lauflicht fortlaufend", steps, "Lauflicht", "PingPong", run)))
+        ids["lauf"].append(("fortlaufend", F.chaser("COB Lauflicht fortlaufend", steps, "Lauflicht", "PingPong", run),
+                            run_factors))
+        # Schlange: Gerät 1 von oben nach unten, Gerät 2 von unten nach oben usw., viermal so schnell
+        snake = [(fx, c if i % 2 == 0 else 5 - c) for i, fx in enumerate(fxs) for c in range(6)]
+        steps = [F.scene(f"Lauflicht Schlange {j + 1}", {fx: {COB[c]: 255}}, "Lauflicht")
+                 for j, (fx, c) in enumerate(snake)]
+        ids["lauf"].append(("Schlange", F.chaser("COB Lauflicht Schlange", steps, "Lauflicht", "PingPong", (300, 600, 300)),
+                            (4, 5, 4)))
+    # Von oben und unten: COBs gehen paarweise von außen nach innen an und von innen nach außen
+    # wieder aus. Einblenden ohne Fade, damit gemeinsame Kanäle beim Übergang nicht einbrechen (HTP).
+    fill = [[], [0, 5], [0, 1, 4, 5], range(6)]
+    steps = [F.scene(f"Lauflicht oben+unten {k}", cobs(fxs, 255, c) if c else {fx: {STROBE: 0} for fx in fxs},
+                     "Lauflicht") for k, c in enumerate(fill)]
+    ids["lauf"].append(("oben+unten", F.chaser("COB Lauflicht oben+unten", steps, "Lauflicht", "PingPong", (0, 600, 1200)),
+                        (1, 5, 6)))
+    # Farbig: wie fortlaufend, Ring um die leuchtende COB in der Farbe des Geräts
+    steps = []
+    for j in range(6 * n):
+        fx, c = fxs[j // 6], j % 6
+        colour = DEVICE_COLOURS[j // 6 % len(DEVICE_COLOURS)]
+        steps.append(F.scene(f"Lauflicht farbig {j + 1}", merge(cobs([fx], 255, [c]), rings([fx], *colour, [c])),
+                             "Lauflicht"))
+    ids["lauf"].append(("farbig", F.chaser("COB Lauflicht farbig", steps, "Lauflicht", "PingPong", run), run_factors))
+
+    ids["glimmen"] = F.scene("Glimmen (Grundlicht)", cobs(fxs, 30), "Lauflicht")
 
     # Hintergrundfarben
     fade = (8000, 8000, 16000)
@@ -262,6 +304,11 @@ def build_functions(F, fxs):
                 vals.update(rings([fx], r, g, b))
             steps.append(F.scene(f"Farben versetzt {k + 1}", vals, "Farben"))
         ids["farben"].append(("versetzt", F.chaser("RGB Farbwechsel versetzt", steps, "Farben", "Loop", fade)))
+
+    # Ringlauf: eisblauer Punkt im Ring, läuft von unten nach oben (gegen das synchrone Lauflicht),
+    # gleiches Tempo wie das Lauflicht; mischt sich per HTP mit der Hintergrundfarbe
+    steps = [F.scene(f"Ringlauf {k + 1}", rings(fxs, 0, 160, 255, [5 - k]), "Farben") for k in range(6)]
+    ids["ringlauf"] = F.chaser("RGB Ringlauf gegen Lauflicht", steps, "Farben", "PingPong", run)
 
     # Aktionen (laufen einmal und legen sich per HTP über das Programm)
     A = "Aktionen"
@@ -280,33 +327,95 @@ def build_functions(F, fxs):
             steps.append((pause, 0, cycle - gap - 80, 0))
     ids["herz"] = F.chaser("Aktion: Herzschlag", steps, A)
 
-    # Welle: weißer Punkt (COB + Ring) läuft über alle Geräte runter, hoch, runter
+    # Welle: weißer Punkt (COB + Ring) läuft über alle Geräte viermal runter und hoch (~9 s bei 2 Geräten)
     total = 6 * n
     wave = [F.scene(f"Welle {j + 1}", merge({fxs[j // 6]: {COB[j % 6]: 255}},
                                              rings([fxs[j // 6]], 255, 255, 255, [j % 6])), A)
             for j in range(total)]
-    order = list(range(total)) + list(range(total - 2, -1, -1)) + list(range(1, total))
-    ids["welle"] = F.chaser("Aktion: Welle", [wave[j] for j in order], A, speed=(120, 900, 300 if n == 1 else 200))
+    order = [0]
+    for _ in range(4):
+        order += list(range(1, total)) + list(range(total - 2, -1, -1))
+    ids["welle"] = F.chaser("Aktion: Welle", [wave[j] for j in order], A,
+                            speed=(60, 500, step_ms(order, 200 if n == 1 else 100)))
 
-    # Farbblitz: nur Ringe, bei mehreren Geräten abwechselnd; Schluss-Weiß auf allen
-    blitz_pause = F.scene("Blitz Pause", {fx: {STROBE: 0} for fx in fxs}, A)
-    palette = [("Cyan", 0, 255, 255), ("Magenta", 255, 0, 255), ("Weiß", 255, 255, 255)]
-    flash_ids = {}
-    seq = [(blitz_pause, 0, 60, 0)]     # kurze Pause, damit die Mask vor dem ersten Blitz aktiv ist
-    for k in range(5 if n == 1 else max(6, 2 * n)):
-        name, r, g, b = palette[k % 3]
-        fx = fxs[k % n]
-        key = (name, fx)
-        if key not in flash_ids:
-            suffix = f" Gerät {k % n + 1}" if n > 1 else ""
-            flash_ids[key] = F.scene(f"Blitz {name}{suffix}", rings([fx], r, g, b), A)
-        seq += [(flash_ids[key], 0, 90, 200), (blitz_pause, 0, 120, 0)]
-    final = F.scene("Blitz Weiß alle", rings(fxs, 255, 255, 255), A)
-    seq.append((final, 0, 400, 1500))
-    ids["blitz"] = F.chaser("Aktion: Farbblitz", seq, A)
+    # Schlange als Aktion: schnell, dreimal hin und zurück (eigene Szenen, das Lauflicht kann parallel laufen)
+    if n > 1:
+        fast = [F.scene(f"Schlange {j + 1}", {fx: {COB[c]: 255}}, A) for j, (fx, c) in enumerate(snake)]
+        order = [0]
+        for _ in range(3):
+            order += list(range(1, len(fast))) + list(range(len(fast) - 2, -1, -1))
+        ids["schlange"] = F.chaser("Aktion: Schlange", [fast[j] for j in order], A,
+                                   speed=(60, 250, step_ms(order, 100)))
 
-    ids["cobs_aus"] = F.scene("COBs aus (Flash zum Farbblitz)", cobs(fxs, 0), A)
-    ids["dunkel"] = F.scene("Hintergrund dunkel (Mask, Flash zum Farbblitz)", rings(fxs, 25, 25, 25), A, blend="Mask")
+    # oben+unten als Aktion: dreimal füllen und leeren, immer schneller, zum Schluss alle an
+    fill_ids = [F.scene(f"oben+unten {k}", cobs(fxs, 255, c) if c else {fx: {STROBE: 0} for fx in fxs}, A)
+                for k, c in enumerate(fill)]
+    steps = []
+    for hold in (350, 280, 220):
+        steps += [(fill_ids[k], 0, hold, 200) for k in (1, 2, 3, 2, 1, 0)]
+    steps += [(fill_ids[1], 0, 200, 0), (fill_ids[2], 0, 200, 0), (fill_ids[3], 0, 1000, 1500)]
+    ids["obenunten"] = F.chaser("Aktion: oben+unten", steps, A)
+
+    # Glühbirne: glimmt an, flackert, geht voll an (~10 s)
+    gl = F.scene("Glühbirne glimmt", cobs(fxs, 25), A)
+    gh = F.scene("Glühbirne halb", cobs(fxs, 120), A)
+    gv = F.scene("Glühbirne voll", cobs(fxs, 255), A)
+    go = F.scene("Glühbirne aus", {fx: {STROBE: 0} for fx in fxs}, A)
+    ids["gluehbirne"] = F.chaser("Aktion: Glühbirne", [
+        (gl, 800, 700, 0), (go, 0, 80, 0), (gl, 0, 120, 0), (go, 0, 150, 0), (gh, 0, 60, 0), (go, 0, 250, 0),
+        (gv, 1200, 4000, 2500)], A)
+
+    # Funkeln: zufällige einzelne COBs blitzen auf (feste Zufallsfolge, nie zweimal dieselbe hintereinander)
+    spark = [F.scene(f"Funkeln {j + 1}", {fxs[j // 6]: {COB[j % 6]: 255}}, A) for j in range(total)]
+    rnd, seq = random.Random(1334), []
+    while len(seq) < 55:
+        j = rnd.randrange(total)
+        if not seq or j != seq[-1]:
+            seq.append(j)
+    ids["funkeln"] = F.chaser("Aktion: Funkeln", [spark[j] for j in seq], A, speed=(0, 400, 140))
+
+    # Countdown: alle COBs an, gehen der Kette nach von hinten aus, zum Schluss Blitz mit Ringen
+    countdown = [F.scene(f"Countdown {k}", merge(*({fxs[j // 6]: {COB[j % 6]: 255}} for j in range(k))), A)
+                 for k in range(total, 0, -1)]
+    t = step_ms(countdown, 1000, 7000)
+    steps = [(sid, 0, t, 300) for sid in countdown]
+    steps.append((F.scene("Countdown Pause", {fx: {STROBE: 0} for fx in fxs}, A), 0, t, 0))
+    steps.append((F.scene("Countdown Blitz", merge(cobs(fxs, 255), rings(fxs, 255, 255, 255)), A), 0, 300, 1500))
+    ids["countdown"] = F.chaser("Aktion: Countdown", steps, A)
+
+
+    # Gewitter: Blitze nur in den Ringen, die COBs hält der Flash-Button „COBs aus“ (Override) auf 0,
+    # „Himmel dunkel“ dunkelt den Farbwechsel nachtblau ab. Läuft ~5 s = Impulsdauer am Taster.
+    hell, fern = (255, 255, 255), (150, 170, 255)
+    half = ([0, 1, 2], [3, 4, 5])                  # obere / untere Ringhälfte
+    blitz_ids = {}
+
+    def blitz(name, targets, colour, pixels=range(6)):
+        key = (name, tuple(targets))
+        if key not in blitz_ids:
+            blitz_ids[key] = F.scene(f"Gewitter {name}", rings(targets, *colour, pixels), A)
+        return blitz_ids[key]
+
+    nacht = F.scene("Gewitter Pause", {fx: {STROBE: 0} for fx in fxs}, A)
+    first, last = fxs[:1], fxs[-1:]
+    seq = [(nacht, 0, 60, 0),                                          # Mask vor dem ersten Blitz aktiv
+           # fernes Wetterleuchten auf einem Gerät
+           (blitz("fern oben", last, fern, half[0]), 0, 50, 0), (nacht, 0, 80, 0),
+           (blitz("fern", last, fern), 0, 40, 400), (nacht, 0, 900, 0),
+           # großer Einschlag: zuckt von oben nach unten, dann alles hell und Nachglühen
+           (blitz("oben", fxs, hell, half[0]), 0, 40, 0), (nacht, 0, 60, 0),
+           (blitz("unten", fxs, hell, half[1]), 0, 30, 0), (nacht, 0, 100, 0),
+           (blitz("alle", fxs, hell), 0, 70, 700), (nacht, 0, 1100, 0),
+           # zweiter Einschlag springt zwischen den Geräten
+           (blitz("Gerät 1", first, hell), 0, 50, 0), (nacht, 0, 40, 0),
+           (blitz("Gerät 2", last, hell), 0, 50, 0), (nacht, 0, 60, 0),
+           (blitz("alle", fxs, hell), 0, 80, 900), (nacht, 0, 800, 0),
+           # letztes Grollen in der Ferne
+           (blitz("fern unten", first, fern, half[1]), 0, 60, 1500)]
+    ids["blitz"] = F.chaser("Aktion: Gewitter", seq, A)
+
+    ids["cobs_aus"] = F.scene("COBs aus (Flash zum Gewitter)", cobs(fxs, 0), A)
+    ids["dunkel"] = F.scene("Himmel dunkel (Mask, Flash zum Gewitter)", rings(fxs, 20, 25, 70), A, blend="Mask")
     return ids
 
 
@@ -332,13 +441,15 @@ class Widgets:
         return [el("Input", {"ID": 0, "Universe": self.osc_universe,
                              "Channel": osc_hash(self.osc_prefix + path)})]
 
-    def button(self, caption, fid, x, y, colour=None, action="Toggle", flash=False, osc=None):
+    def button(self, caption, fid, x, y, colour=None, action="Toggle", flash=False, osc=None, key=None):
         b = el("Button", {"Caption": caption, "ID": self._id()}, children=[self.ws(x, y, 130, 90)])
         if colour is not None:
             b.append(el("Appearance", children=[el("BackgroundColor", text=0xFF000000 | colour)]))
         b.append(el("Function", {"ID": fid}))
         b.append(el("Action", {"Override": 1, "ForceLTP": 1} if flash else None, action))
         b.extend(self.osc_input(osc) if osc else [])
+        if key:
+            b.append(el("Key", text=key))
         return b
 
     def submaster(self, caption, x, y):
@@ -349,12 +460,12 @@ class Widgets:
             el("Level", {"LowLimit": 0, "HighLimit": 255, "Value": 255})])
 
     def speeddial(self, caption, fids, x, y, time, factors, tmax, presets):
-        # Faktoren: 5 = 1/2, 6 = 1x, 7 = 2x; Sichtbar: +/-, Dial, Tap, s, ms, Multiplikatoren
+        """factors: je Funktion (FadeIn, FadeOut, Duration)"""
+        # Faktoren: 1 = 0, 4 = 1/4, 5 = 1/2, 6 = 1x, 7 = 2x; Sichtbar: +/-, Dial, Tap, s, ms, Multiplikatoren
         d = el("SpeedDial", {"Caption": caption, "ID": self._id()}, children=[
             self.ws(x, y, 230, 390), el("Visibility", text=231), el("Time", text=time),
             el("AbsoluteValue", {"Minimum": 0, "Maximum": tmax})])
-        fin, fout, dur = factors
-        for fid in fids:
+        for fid, (fin, fout, dur) in zip(fids, factors):
             d.append(el("Function", {"FadeIn": fin, "FadeOut": fout, "Duration": dur}, fid))
         for i, (name, value) in enumerate(presets, 1):
             d.append(el("Preset", {"ID": i}, children=[el("Name", text=name), el("Value", text=value)]))
@@ -372,7 +483,7 @@ class Widgets:
         """Eine Variante: einfacher Button. Mehrere: Solo-Frame, damit immer nur eine läuft."""
         if len(variants) == 1:
             return self.button(title, variants[0][1], x, y, colour)
-        btns = [self.button(f"{title} {label}", fid, 10 + 140 * i, 40, colour) for i, (label, fid) in enumerate(variants)]
+        btns = [self.button(f"{title} {label}", fid, 10 + 140 * i, 40, colour) for i, (label, fid, *_) in enumerate(variants)]
         return self.frame(title, x, y, 20 + 140 * len(variants), 140, btns, solo=True)
 
 
@@ -380,38 +491,49 @@ def build_console(W, ids):
     top = [
         W.button("Basis (Dimmer auf)", ids["basis"], 10, 40),
         W.button("Stop All", INVALID_ID, 150, 40, 0x8B0000, action="StopAll"),
-        # Farbblitz außerhalb der Submaster-Rahmen (volle Helligkeit); alle drei an derselben Adresse
-        W.button("Aktion: Farbblitz", ids["blitz"], 310, 40, 0x6A1B9A, osc="/aktion/4"),
-        W.button("COBs aus (Flash zum Farbblitz)", ids["cobs_aus"], 450, 40, 0x303030,
-                 action="Flash", flash=True, osc="/aktion/4"),
-        W.button("Hintergrund dunkel (Flash zum Farbblitz)", ids["dunkel"], 590, 40, 0x202020,
-                 action="Flash", osc="/aktion/4"),
+        # Gewitter außerhalb der Submaster-Rahmen (volle Helligkeit); alle drei an derselben Adresse
+        # und auf Taste G: COBs und Himmel bleiben dunkel, solange gehalten wird
+        W.button("Aktion: Gewitter (Taste G halten)", ids["blitz"], 310, 40, 0x1A237E, osc="/aktion/4", key="G"),
+        W.button("COBs aus (Flash zum Gewitter)", ids["cobs_aus"], 450, 40, 0x303030,
+                 action="Flash", flash=True, osc="/aktion/4", key="G"),
+        W.button("Himmel dunkel (Flash zum Gewitter)", ids["dunkel"], 590, 40, 0x101830,
+                 action="Flash", osc="/aktion/4", key="G"),
     ]
-    lauf_fids = [fid for _, fid in ids["lauf"]]
+    cob_w = max(530, 30 + 140 * len(ids["lauf"]))
+    col_w = max(390, 30 + 140 * len(ids["farben"]))
+    # Aktionen mit fester OSC-Nummer (die Schlange gibt es nur bei mehreren Geräten)
+    actions = [("Aktion: Alle COBs 5 s", "alle", 0x007583, 1), ("Aktion: Herzschlag", "herz", 0x8B1A1A, 2),
+               ("Aktion: Welle", "welle", 0x5A5A5A, 3), ("Aktion: Schlange", "schlange", 0x2E7D32, 5),
+               ("Aktion: oben+unten", "obenunten", 0x1565C0, 6), ("Aktion: Glühbirne", "gluehbirne", 0x8D6E00, 7),
+               ("Aktion: Funkeln", "funkeln", 0x455A64, 8), ("Aktion: Countdown", "countdown", 0xBF360C, 9)]
+    actions = [a for a in actions if a[1] in ids]
+    per_row = (cob_w - 20) // 140
+    btns = [W.button(cap, ids[key], 10 + 140 * (i % per_row), 200 + 100 * (i // per_row), colour, osc=f"/aktion/{num}")
+            for i, (cap, key, colour, num) in enumerate(actions)]
+    y = 210 + 100 * ((len(actions) + per_row - 1) // per_row)
+    h = y + 410
+    lauf = ids["lauf"] + [("Ringlauf", ids["ringlauf"], (6, 7, 6))]
     cob = [
         W.variant_buttons("Lauflicht", ids["lauf"], 0xB36B00, 10, 40),
-        W.button("Aktion: Alle COBs 5 s", ids["alle"], 10, 200, 0x007583, osc="/aktion/1"),
-        W.button("Aktion: Herzschlag", ids["herz"], 150, 200, 0x8B1A1A, osc="/aktion/2"),
-        W.button("Aktion: Welle", ids["welle"], 290, 200, 0x5A5A5A, osc="/aktion/3"),
-        W.speeddial("Tempo Lauflicht", lauf_fids, 10, 310, 1200, (6, 7, 6), 10000,
+        *btns,
+        W.speeddial("Tempo Lauflicht + Ringlauf", [fid for _, fid, _ in lauf], 10, y, 1200, [f for _, _, f in lauf], 10000,
                     [("Standard", 1200), ("Langsam", 2500), ("Schnell", 600)]),
-        W.submaster("Helligkeit COB", 260, 310),
+        W.submaster("Helligkeit COB", 260, y),
+        W.button("Glimmen (Grundlicht)", ids["glimmen"], 390, y, 0x6D4C41),
     ]
     farben_fids = [fid for _, fid in ids["farben"]]
     col = [
         W.variant_buttons("Farbwechsel", ids["farben"], 0x4A148C, 10, 40),
-        W.speeddial("Tempo Farben", farben_fids, 10, 310, 16000, (5, 5, 6), 60000,
+        W.button("Ringlauf gegen Lauflicht", ids["ringlauf"], 10, 200, 0x00838F),
+        W.speeddial("Tempo Farben", farben_fids, 10, y, 16000, [(5, 5, 6)] * len(farben_fids), 60000,
                     [("Standard", 16000), ("Langsam", 30000), ("Schnell", 8000)]),
-        W.submaster("Helligkeit Farben", 260, 310),
+        W.submaster("Helligkeit Farben", 260, y),
     ]
-    cob_w = max(450, 30 + 140 * len(ids["lauf"]))
-    col_w = max(390, 30 + 140 * len(ids["farben"]))
     inner = top + [
-        W.frame("COB – Lauflicht & Aktionen", 10, 150, cob_w, 720, cob),
-        W.frame("Farben – Hintergrund", 20 + cob_w, 150, col_w, 720, col),
+        W.frame("COB – Lauflicht & Aktionen", 10, 150, cob_w, h, cob),
+        W.frame("Farben – Hintergrund", 20 + cob_w, 150, col_w, h, col),
     ]
-    return inner, 40 + cob_w + col_w, 890
-
+    return inner, 40 + cob_w + col_w, h + 170
 
 def carry_over_inputs(old_frame, new_frame):
     """Von Hand gesetzte Eingänge/Tasten (gleiche Beschriftung) aus dem alten Rahmen übernehmen."""
